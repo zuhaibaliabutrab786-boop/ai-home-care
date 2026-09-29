@@ -1,0 +1,1408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AI Home Care | Gujranwala</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    color:#243746;
+    background:#fff;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:92%;
+    max-width:1150px;
+    margin:auto;
+}
+
+/* HEADER */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#fff;
+    border-bottom:1px solid #e0e8eb;
+}
+
+.navbar{
+    min-height:72px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:21px;
+    font-weight:800;
+    color:#09243d;
+}
+
+.logo span{
+    color:#0c9b8a;
+}
+
+.logo-icon{
+    width:42px;
+    height:42px;
+    border-radius:12px;
+    background:#09243d;
+    color:#fff;
+    display:grid;
+    place-items:center;
+    font-size:22px;
+}
+
+nav{
+    display:flex;
+    gap:24px;
+    align-items:center;
+}
+
+nav a{
+    font-size:14px;
+    font-weight:600;
+}
+
+nav a:hover{
+    color:#0c9b8a;
+}
+
+.nav-btn{
+    background:#0c9b8a;
+    color:#fff !important;
+    padding:11px 18px;
+    border-radius:9px;
+}
+
+.menu{
+    display:none;
+    font-size:27px;
+    border:0;
+    background:none;
+}
+
+/* HERO */
+
+.hero{
+    background:linear-gradient(135deg,#f5fbfb,#edf7f7);
+    padding:80px 0;
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.badge{
+    display:inline-block;
+    background:#dff5f2;
+    color:#08776b;
+    padding:8px 15px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:bold;
+    margin-bottom:18px;
+}
+
+.hero h1{
+    color:#09243d;
+    font-size:65px;
+    line-height:1;
+    letter-spacing:-2px;
+}
+
+.hero h1 span{
+    color:#0c9b8a;
+}
+
+.hero h2{
+    color:#123b5d;
+    margin:18px 0 12px;
+    font-size:25px;
+}
+
+.hero p{
+    color:#667783;
+    max-width:600px;
+    font-size:17px;
+    margin-bottom:27px;
+}
+
+.buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 21px;
+    border-radius:10px;
+    font-weight:bold;
+    border:0;
+    cursor:pointer;
+    font-size:15px;
+}
+
+.primary{
+    background:#0c9b8a;
+    color:white;
+}
+
+.primary:hover{
+    background:#08776b;
+}
+
+.secondary{
+    background:white;
+    color:#09243d;
+    border:1px solid #dce7eb;
+}
+
+.hero-card{
+    background:#09243d;
+    color:white;
+    padding:35px;
+    border-radius:25px;
+    box-shadow:0 20px 50px rgba(9,36,61,.18);
+}
+
+.hero-card .icon{
+    font-size:60px;
+}
+
+.hero-card h3{
+    font-size:28px;
+    margin:10px 0;
+}
+
+.hero-card p{
+    color:#d5e3eb;
+    margin-bottom:22px;
+}
+
+.mini-services{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+}
+
+.mini-services div{
+    background:rgba(255,255,255,.09);
+    padding:10px;
+    border-radius:9px;
+    font-size:13px;
+}
+
+/* TRUST */
+
+.trust{
+    background:#09243d;
+    color:white;
+    padding:22px 0;
+}
+
+.trust-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    text-align:center;
+    gap:15px;
+}
+
+.trust strong{
+    display:block;
+    color:#71d9ce;
+    font-size:21px;
+}
+
+/* SECTIONS */
+
+section{
+    padding:80px 0;
+}
+
+.heading{
+    text-align:center;
+    max-width:720px;
+    margin:0 auto 45px;
+}
+
+.heading small{
+    color:#0c9b8a;
+    font-weight:bold;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.heading h2{
+    color:#09243d;
+    font-size:38px;
+    margin:8px 0;
+}
+
+.heading p{
+    color:#667783;
+}
+
+/* SERVICES */
+
+.services{
+    background:#f5f9fa;
+}
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.service{
+    background:white;
+    padding:23px 20px;
+    border:1px solid #dce7eb;
+    border-radius:17px;
+    transition:.2s;
+}
+
+.service:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 30px rgba(9,36,61,.09);
+}
+
+.service-icon{
+    width:52px;
+    height:52px;
+    border-radius:13px;
+    background:#e5f7f4;
+    display:grid;
+    place-items:center;
+    font-size:25px;
+    margin-bottom:13px;
+}
+
+.service h3{
+    color:#09243d;
+    font-size:17px;
+    margin-bottom:6px;
+}
+
+.service p{
+    color:#667783;
+    font-size:13px;
+}
+
+/* HOW */
+
+.steps{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.step{
+    text-align:center;
+}
+
+.number{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    background:#09243d;
+    color:white;
+    display:grid;
+    place-items:center;
+    margin:0 auto 14px;
+    font-weight:bold;
+    font-size:19px;
+}
+
+.step h3{
+    color:#09243d;
+    margin-bottom:6px;
+}
+
+.step p{
+    color:#667783;
+    font-size:14px;
+}
+
+/* BOOKING */
+
+.booking{
+    background:#f5f9fa;
+}
+
+.booking-grid{
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:30px;
+}
+
+.booking-info{
+    background:#09243d;
+    color:white;
+    padding:35px;
+    border-radius:22px;
+}
+
+.booking-info h2{
+    font-size:30px;
+    margin-bottom:12px;
+}
+
+.booking-info p{
+    color:#cbdbe4;
+}
+
+.contact{
+    display:flex;
+    gap:12px;
+    align-items:center;
+    margin-top:20px;
+}
+
+.contact-icon{
+    width:40px;
+    height:40px;
+    border-radius:9px;
+    background:rgba(255,255,255,.1);
+    display:grid;
+    place-items:center;
+}
+
+.form{
+    background:white;
+    padding:30px;
+    border-radius:22px;
+    box-shadow:0 12px 35px rgba(9,36,61,.08);
+}
+
+.row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.group{
+    margin-bottom:17px;
+}
+
+label{
+    display:block;
+    font-size:13px;
+    font-weight:bold;
+    color:#09243d;
+    margin-bottom:6px;
+}
+
+input,select,textarea{
+    width:100%;
+    padding:13px;
+    border:1px solid #dce7eb;
+    border-radius:9px;
+    font:inherit;
+    outline:none;
+}
+
+textarea{
+    min-height:100px;
+    resize:vertical;
+}
+
+input:focus,select:focus,textarea:focus{
+    border-color:#0c9b8a;
+}
+
+/* WHY */
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.why{
+    border:1px solid #dce7eb;
+    padding:28px;
+    border-radius:18px;
+}
+
+.why-icon{
+    font-size:30px;
+    margin-bottom:8px;
+}
+
+.why h3{
+    color:#09243d;
+    margin-bottom:6px;
+}
+
+.why p{
+    color:#667783;
+    font-size:14px;
+}
+
+/* AREAS */
+
+.areas{
+    background:#f5f9fa;
+}
+
+.area-list{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.area{
+    background:white;
+    border:1px solid #dce7eb;
+    padding:10px 16px;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:bold;
+}
+
+/* CTA */
+
+.cta{
+    background:#09243d;
+    color:white;
+    text-align:center;
+}
+
+.cta h2{
+    font-size:38px;
+    margin-bottom:10px;
+}
+
+.cta p{
+    color:#cbdbe4;
+    margin-bottom:25px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#061a2b;
+    color:#b9cbd5;
+    padding:30px 0;
+}
+
+.footer{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.footer-brand{
+    color:white;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.footer-brand span{
+    color:#71d9ce;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    background:#25D366;
+    color:white;
+    display:grid;
+    place-items:center;
+    font-size:28px;
+    z-index:9999;
+    box-shadow:0 8px 25px rgba(0,0,0,.2);
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .hero-grid,
+    .booking-grid{
+        grid-template-columns:1fr;
+    }
+
+    .services-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .steps{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:700px){
+
+    .menu{
+        display:block;
+    }
+
+    nav{
+        display:none;
+        position:absolute;
+        top:72px;
+        left:0;
+        right:0;
+        background:white;
+        padding:20px;
+        flex-direction:column;
+        border-bottom:1px solid #ddd;
+    }
+
+    nav.show{
+        display:flex;
+    }
+
+    .hero{
+        padding:60px 0;
+    }
+
+    .hero h1{
+        font-size:48px;
+    }
+
+    .services-grid,
+    .why-grid,
+    .trust-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .footer{
+        flex-direction:column;
+        text-align:center;
+    }
+
+}
+
+@media(max-width:500px){
+
+    .services-grid,
+    .why-grid,
+    .steps,
+    .trust-grid,
+    .row{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:43px;
+    }
+
+    .heading h2,
+    .cta h2{
+        font-size:30px;
+    }
+
+    .buttons .btn{
+        width:100%;
+        text-align:center;
+    }
+
+}
+</style>
+</head>
+
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="container navbar">
+
+<a href="#home" class="logo">
+<div class="logo-icon">⌂</div>
+AI <span>HOME CARE</span>
+</a>
+
+<button class="menu" id="menu">☰</button>
+
+<nav id="nav">
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#how">How It Works</a>
+<a href="#areas">Areas</a>
+<a href="#booking" class="nav-btn">Book Technician</a>
+</nav>
+
+</div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="container hero-grid">
+
+<div>
+
+<div class="badge">
+🏠 Professional Home Maintenance
+</div>
+
+<h1>
+AI <span>HOME</span><br>
+CARE
+</h1>
+
+<h2>
+Ghar ki har repair, ek call par.
+</h2>
+
+<p>
+AC, Fridge, Washing Machine, Microwave,
+Dispenser, Geyser, UPS, Electrical,
+Plumbing, Carpentry aur general home
+maintenance — sab ek hi jagah.
+</p>
+
+<div class="buttons">
+
+<a
+href="tel:+923054226888"
+class="btn primary">
+📞 Call Now
+</a>
+
+<a
+href="https://wa.me/923054226888?text=Assalam-o-Alaikum%2C%20mujhe%20AI%20Home%20Care%20ki%20service%20chahiye."
+target="_blank"
+class="btn secondary">
+💬 WhatsApp
+</a>
+
+</div>
+
+</div>
+
+
+<div class="hero-card">
+
+<div class="icon">🏠🔧</div>
+
+<h3>
+One Call. Many Solutions.
+</h3>
+
+<p>
+Aap ke ghar ki repair problem ke liye
+relevant technician aap tak pohanchta hai.
+</p>
+
+<div class="mini-services">
+
+<div>❄️ AC & Fridge</div>
+<div>🧺 Washing Machine</div>
+<div>⚡ Electrical & UPS</div>
+<div>🚿 Plumbing</div>
+<div>🔥 Geyser</div>
+<div>🪚 Carpentry</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- TRUST -->
+
+<div class="trust">
+
+<div class="container trust-grid">
+
+<div>
+<strong>01</strong>
+One Call Service
+</div>
+
+<div>
+<strong>✓</strong>
+Transparent Estimate
+</div>
+
+<div>
+<strong>✓</strong>
+Professional Technicians
+</div>
+
+<div>
+<strong>✓</strong>
+Service Warranty
+</div>
+
+</div>
+
+</div>
+
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+
+<div class="container">
+
+<div class="heading">
+
+<small>Our Services</small>
+
+<h2>
+Ghar ki har repair ka solution
+</h2>
+
+<p>
+Appliances, electrical, plumbing aur
+general home maintenance — sab ek hi
+brand ke under.
+</p>
+
+</div>
+
+
+<div class="services-grid">
+
+<div class="service">
+<div class="service-icon">❄️</div>
+<h3>AC Service</h3>
+<p>AC repair, service, installation aur maintenance.</p>
+</div>
+
+<div class="service">
+<div class="service-icon">🧊</div>
+<h3>Refrigerator</h3>
+<p>Cooling, gas, compressor aur general repair.</p>
+</div>
+
+<div class="service">
+<div class="service-icon">🧺</div>
+<h3>Washing Machine</h3>
+<p>Automatic washing machine diagnosis aur repair.</p>
+</div>
+
+<div class="service">
+<div class="service-icon">📺</div>
+<h3>Microwave Oven</h3>
+<p>Microwave oven inspection aur repair.</p>
+</div>
+
+<div class="service">
+<div class="service-icon">💧</div>
+<h3>Water Dispenser</h3>
+<p>Cooling, heating aur dispenser repair.</p>
+</div>
+
+<div class="service">
+<div class="service-icon">🔥</div>
+<h3>Geyser</h3>
+<p>Geyser troubleshooting aur maintenance.</p>
+</div>
+
+<div class="service">
+<div class="service-icon">🍳</div>
+<h3>Kitchen Hood</h3>
+<p>Kitchen hood cleaning aur repair.</p>
+</div>
+
+<div class="service">
+<div class="service-icon">🔋</div>
+<h3>UPS</h3>
+<p>UPS inspection, battery aur repair.</p>
+</div>
+
+<div class="service">
+<div class="service-icon">⚡</div>
+<h3>Electrical</h3>
+<p>Wiring, switches aur electrical faults.</p>
+</div>
+
+<div class="service">
+<div class="service-icon">🚿</div>
+<h3>Plumbing</h3>
+<p>Leaks, taps, pipes aur drainage problems.</p>
+</div>
+
+<div class="service">
+<div class="service-icon">🪚</div>
+<h3>Carpentry</h3>
+<p>Doors, cabinets, shelves aur woodwork.</p>
+</div>
+
+<div class="service">
+<div class="service-icon">🔧</div>
+<h3>General Maintenance</h3>
+<p>Ghar ki maintenance problems ka solution.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- HOW IT WORKS -->
+
+<section id="how">
+
+<div class="container">
+
+<div class="heading">
+
+<small>Simple Process</small>
+
+<h2>
+Service kaise milegi?
+</h2>
+
+<p>
+Sirf kuch simple steps mein technician
+aap ke ghar tak.
+</p>
+
+</div>
+
+
+<div class="steps">
+
+<div class="step">
+<div class="number">1</div>
+<h3>Call / WhatsApp</h3>
+<p>Apni problem call ya WhatsApp par batayein.</p>
+</div>
+
+<div class="step">
+<div class="number">2</div>
+<h3>Technician Visit</h3>
+<p>Relevant technician ghar visit karega.</p>
+</div>
+
+<div class="step">
+<div class="number">3</div>
+<h3>Diagnosis</h3>
+<p>Problem diagnose karke estimate diya jayega.</p>
+</div>
+
+<div class="step">
+<div class="number">4</div>
+<h3>Repair</h3>
+<p>Approval ke baad repair complete hogi.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- BOOKING -->
+
+<section class="booking" id="booking">
+
+<div class="container booking-grid">
+
+
+<div class="booking-info">
+
+<h2>
+Technician Book Karein
+</h2>
+
+<p>
+Form fill karein aur request WhatsApp
+par bhej dein.
+</p>
+
+<div class="contact">
+
+<div class="contact-icon">📞</div>
+
+<div>
+<small>Call / WhatsApp</small><br>
+<strong>0305 4226888</strong>
+</div>
+
+</div>
+
+
+<div class="contact">
+
+<div class="contact-icon">🏠</div>
+
+<div>
+<small>Service Area</small><br>
+<strong>Gujranwala</strong>
+</div>
+
+</div>
+
+
+<div class="contact">
+
+<div class="contact-icon">🔧</div>
+
+<div>
+<small>Service</small><br>
+<strong>Home Visit Available</strong>
+</div>
+
+</div>
+
+</div>
+
+
+<form class="form" id="bookingForm">
+
+<div class="row">
+
+<div class="group">
+<label>Your Name *</label>
+<input id="name" type="text" placeholder="Apna naam" required>
+</div>
+
+<div class="group">
+<label>Phone Number *</label>
+<input id="phone" type="tel" placeholder="03XXXXXXXXX" required>
+</div>
+
+</div>
+
+
+<div class="row">
+
+<div class="group">
+
+<label>Service *</label>
+
+<select id="service" required>
+
+<option value="">Select Service</option>
+
+<option>AC Service</option>
+<option>Refrigerator Repair</option>
+<option>Washing Machine Repair</option>
+<option>Microwave Oven Repair</option>
+<option>Water Dispenser Repair</option>
+<option>Geyser Repair</option>
+<option>Kitchen Hood Repair</option>
+<option>UPS Repair</option>
+<option>Electrical Service</option>
+<option>Plumbing Service</option>
+<option>Carpentry</option>
+<option>General Home Maintenance</option>
+
+</select>
+
+</div>
+
+
+<div class="group">
+
+<label>Area *</label>
+
+<input
+id="area"
+type="text"
+placeholder="e.g. DC Colony"
+required>
+
+</div>
+
+</div>
+
+
+<div class="row">
+
+<div class="group">
+
+<label>Preferred Date</label>
+
+<input id="date" type="date">
+
+</div>
+
+
+<div class="group">
+
+<label>Preferred Time</label>
+
+<select id="time">
+
+<option value="">Select Time</option>
+<option>9 AM - 12 PM</option>
+<option>12 PM - 3 PM</option>
+<option>3 PM - 6 PM</option>
+<option>6 PM - 9 PM</option>
+
+</select>
+
+</div>
+
+</div>
+
+
+<div class="group">
+
+<label>Problem Details</label>
+
+<textarea
+id="problem"
+placeholder="Masla briefly describe karein..."
+></textarea>
+
+</div>
+
+
+<button type="submit" class="btn primary">
+💬 Send Booking on WhatsApp
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+
+<!-- WHY US -->
+
+<section>
+
+<div class="container">
+
+<div class="heading">
+
+<small>Why AI Home Care</small>
+
+<h2>
+Aap humein kyun choose karein?
+</h2>
+
+</div>
+
+
+<div class="why-grid">
+
+<div class="why">
+<div class="why-icon">👨‍🔧</div>
+<h3>Professional Technicians</h3>
+<p>Relevant problem ke liye skilled technician.</p>
+</div>
+
+<div class="why">
+<div class="why-icon">💰</div>
+<h3>Transparent Estimate</h3>
+<p>Repair se pehle diagnosis aur estimate.</p>
+</div>
+
+<div class="why">
+<div class="why-icon">🛡️</div>
+<h3>Service Warranty</h3>
+<p>Applicable services par service warranty.</p>
+</div>
+
+<div class="why">
+<div class="why-icon">📱</div>
+<h3>Easy WhatsApp Booking</h3>
+<p>WhatsApp par service request bhejna easy.</p>
+</div>
+
+<div class="why">
+<div class="why-icon">🏠</div>
+<h3>Home Visit</h3>
+<p>Technician ghar visit karke problem diagnose karta hai.</p>
+</div>
+
+<div class="why">
+<div class="why-icon">🔧</div>
+<h3>Multiple Services</h3>
+<p>Home appliances, electrical, plumbing aur maintenance.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- AREAS -->
+
+<section class="areas" id="areas">
+
+<div class="container">
+
+<div class="heading">
+
+<small>Service Areas</small>
+
+<h2>
+Gujranwala mein home service
+</h2>
+
+<p>
+Gujranwala ke residential areas mein service.
+</p>
+
+</div>
+
+
+<div class="area-list">
+
+<div class="area">DC Colony</div>
+<div class="area">Wapda Town</div>
+<div class="area">Citi Housing</div>
+<div class="area">Model Town</div>
+<div class="area">Satellite Town</div>
+<div class="area">Cantt / Rahwali</div>
+<div class="area">DHA Gujranwala</div>
+<div class="area">Nearby Areas</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<div class="container">
+
+<h2>
+Ghar mein koi repair problem?
+</h2>
+
+<p>
+AI Home Care ko call ya WhatsApp karein.
+</p>
+
+<div class="buttons" style="justify-content:center;">
+
+<a
+href="tel:+923054226888"
+class="btn primary">
+📞 0305 4226888
+</a>
+
+<a
+href="https://wa.me/923054226888?text=Assalam-o-Alaikum%2C%20mujhe%20AI%20Home%20Care%20ki%20service%20chahiye."
+target="_blank"
+class="btn secondary">
+💬 WhatsApp
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container footer">
+
+<div>
+
+<div class="footer-brand">
+AI <span>HOME CARE</span>
+</div>
+
+<div>
+Ghar ki har repair, ek call par.
+</div>
+
+</div>
+
+
+<div>
+
+Call / WhatsApp:
+<a href="tel:+923054226888">
+0305 4226888
+</a>
+
+<br>
+
+© <span id="year"></span> AI Home Care
+
+</div>
+
+</div>
+
+</footer>
+
+
+<!-- FLOATING WHATSAPP -->
+
+<a
+class="whatsapp"
+href="https://wa.me/923054226888?text=Assalam-o-Alaikum%2C%20mujhe%20AI%20Home%20Care%20ki%20service%20chahiye."
+target="_blank">
+💬
+</a>
+
+
+<script>
+
+/* Mobile Menu */
+
+const menu = document.getElementById("menu");
+const nav = document.getElementById("nav");
+
+menu.addEventListener("click",function(){
+    nav.classList.toggle("show");
+});
+
+
+/* Close menu */
+
+document.querySelectorAll("#nav a").forEach(function(link){
+
+    link.addEventListener("click",function(){
+        nav.classList.remove("show");
+    });
+
+});
+
+
+/* Year */
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+
+/* WhatsApp Booking */
+
+document.getElementById("bookingForm")
+.addEventListener("submit",function(e){
+
+    e.preventDefault();
+
+    const name =
+    document.getElementById("name").value;
+
+    const phone =
+    document.getElementById("phone").value;
+
+    const service =
+    document.getElementById("service").value;
+
+    const area =
+    document.getElementById("area").value;
+
+    const date =
+    document.getElementById("date").value;
+
+    const time =
+    document.getElementById("time").value;
+
+    const problem =
+    document.getElementById("problem").value;
+
+
+    let message =
+    "Assalam-o-Alaikum, AI Home Care mein service book karni hai.%0A%0A";
+
+    message +=
+    "Name: " +
+    encodeURIComponent(name) +
+    "%0A";
+
+    message +=
+    "Phone: " +
+    encodeURIComponent(phone) +
+    "%0A";
+
+    message +=
+    "Service: " +
+    encodeURIComponent(service) +
+    "%0A";
+
+    message +=
+    "Area: " +
+    encodeURIComponent(area) +
+    "%0A";
+
+
+    if(date){
+
+        message +=
+        "Date: " +
+        encodeURIComponent(date) +
+        "%0A";
+
+    }
+
+
+    if(time){
+
+        message +=
+        "Time: " +
+        encodeURIComponent(time) +
+        "%0A";
+
+    }
+
+
+    if(problem){
+
+        message +=
+        "Problem: " +
+        encodeURIComponent(problem) +
+        "%0A";
+
+    }
+
+
+    const url =
+    "https://wa.me/923054226888?text=" +
+    message;
+
+
+    window.open(url,"_bla
