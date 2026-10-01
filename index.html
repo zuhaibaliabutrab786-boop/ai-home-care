@@ -144,9 +144,24 @@ button,input,select,textarea{font:inherit}
 .services{background:var(--soft)}
 .service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:38px}
 .service-card{
-  background:#fff;border:1px solid var(--line);border-radius:20px;padding:23px;
-  transition:.25s;position:relative;overflow:hidden
+  background:#fff;border:1px solid var(--line);border-radius:20px;
+  padding:0;transition:.25s;position:relative;overflow:hidden
 }
+.service-image{
+  height:175px;position:relative;overflow:hidden;background:#eaf2f3
+}
+.service-image img{
+  width:100%;height:100%;object-fit:cover;transition:.45s
+}
+.service-card:hover .service-image img{transform:scale(1.06)}
+.service-image:after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(7,24,39,0) 45%,rgba(7,24,39,.28))
+}
+.service-content{padding:20px 21px 21px}
+.service-card .service-icon{width:46px;height:46px;border-radius:14px;margin-top:-43px;position:relative;z-index:2;border:3px solid #fff}
+.service-card .service-icon svg{width:24px;height:24px}
+
 .service-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:#cfe8e2}
 .service-icon{width:52px;height:52px;border-radius:16px;background:var(--mint);display:grid;place-items:center;color:var(--teal);margin-bottom:18px}
 .service-icon svg{width:27px;height:27px}
@@ -367,64 +382,76 @@ details p{color:var(--muted);font-size:.9rem;margin-top:10px;padding-right:20px}
 
     <div class="service-grid">
       <article class="service-card">
-        <div class="service-icon">❄️</div><h3>AC Repair</h3>
+        <div class="service-image"><img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=900&q=85" alt="AC Repair service in Gujranwala" loading="lazy"></div><div class="service-content"><div class="service-icon"><span aria-hidden="true">✓</span></div><h3>AC Repair</h3>
         <p>Cooling issue, gas, service, installation and maintenance.</p>
         <a class="service-link" href="https://wa.me/923054226888?text=AC%20repair%20service%20chahiye.">Book service →</a>
+        </div>
       </article>
       <article class="service-card">
-        <div class="service-icon">🧊</div><h3>Refrigerator</h3>
+        <div class="service-image"><img src="https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?auto=format&fit=crop&w=900&q=85" alt="Refrigerator service in Gujranwala" loading="lazy"></div><div class="service-content"><div class="service-icon"><span aria-hidden="true">✓</span></div><h3>Refrigerator</h3>
         <p>Cooling, leakage, compressor and general fridge repairs.</p>
         <a class="service-link" href="https://wa.me/923054226888?text=Refrigerator%20repair%20service%20chahiye.">Book service →</a>
+        </div>
       </article>
       <article class="service-card">
-        <div class="service-icon">🫧</div><h3>Washing Machine</h3>
+        <div class="service-image"><img src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?auto=format&fit=crop&w=900&q=85" alt="Washing Machine service in Gujranwala" loading="lazy"></div><div class="service-content"><div class="service-icon"><span aria-hidden="true">✓</span></div><h3>Washing Machine</h3>
         <p>Automatic washing machine diagnosis and repair.</p>
         <a class="service-link" href="https://wa.me/923054226888?text=Washing%20machine%20repair%20service%20chahiye.">Book service →</a>
+        </div>
       </article>
       <article class="service-card">
-        <div class="service-icon">⚡</div><h3>Electrical</h3>
+        <div class="service-image"><img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=900&q=85" alt="Electrical service in Gujranwala" loading="lazy"></div><div class="service-content"><div class="service-icon"><span aria-hidden="true">✓</span></div><h3>Electrical</h3>
         <p>Home electrical faults, switches, wiring and related work.</p>
         <a class="service-link" href="https://wa.me/923054226888?text=Electrical%20service%20chahiye.">Book service →</a>
+        </div>
       </article>
       <article class="service-card">
-        <div class="service-icon">🚰</div><h3>Plumbing</h3>
+        <div class="service-image"><img src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?auto=format&fit=crop&w=900&q=85" alt="Plumbing service in Gujranwala" loading="lazy"></div><div class="service-content"><div class="service-icon"><span aria-hidden="true">✓</span></div><h3>Plumbing</h3>
         <p>Leaks, taps, pipes, drainage and everyday plumbing jobs.</p>
         <a class="service-link" href="https://wa.me/923054226888?text=Plumbing%20service%20chahiye.">Book service →</a>
+        </div>
       </article>
       <article class="service-card">
-        <div class="service-icon">🔌</div><h3>UPS</h3>
+        <div class="service-image"><img src="https://images.unsplash.com/photo-1620714223084-8fcacc6dfd8d?auto=format&fit=crop&w=900&q=85" alt="UPS service in Gujranwala" loading="lazy"></div><div class="service-content"><div class="service-icon"><span aria-hidden="true">✓</span></div><h3>UPS</h3>
         <p>UPS inspection, troubleshooting and repair support.</p>
         <a class="service-link" href="https://wa.me/923054226888?text=UPS%20service%20chahiye.">Book service →</a>
+        </div>
       </article>
       <article class="service-card">
-        <div class="service-icon">🔥</div><h3>Geyser</h3>
+        <div class="service-image"><img src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=900&q=85" alt="Geyser service in Gujranwala" loading="lazy"></div><div class="service-content"><div class="service-icon"><span aria-hidden="true">✓</span></div><h3>Geyser</h3>
         <p>Water heater repair, maintenance and troubleshooting.</p>
         <a class="service-link" href="https://wa.me/923054226888?text=Geyser%20service%20chahiye.">Book service →</a>
+        </div>
       </article>
       <article class="service-card">
-        <div class="service-icon">🍽️</div><h3>Kitchen Hood</h3>
+        <div class="service-image"><img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=900&q=85" alt="Kitchen Hood service in Gujranwala" loading="lazy"></div><div class="service-content"><div class="service-icon"><span aria-hidden="true">✓</span></div><h3>Kitchen Hood</h3>
         <p>Kitchen hood cleaning, faults and repair assistance.</p>
         <a class="service-link" href="https://wa.me/923054226888?text=Kitchen%20hood%20service%20chahiye.">Book service →</a>
+        </div>
       </article>
       <article class="service-card">
-        <div class="service-icon">📡</div><h3>Microwave Oven</h3>
+        <div class="service-image"><img src="https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?auto=format&fit=crop&w=900&q=85" alt="Microwave Oven service in Gujranwala" loading="lazy"></div><div class="service-content"><div class="service-icon"><span aria-hidden="true">✓</span></div><h3>Microwave Oven</h3>
         <p>Microwave diagnosis and common appliance repairs.</p>
         <a class="service-link" href="https://wa.me/923054226888?text=Microwave%20repair%20service%20chahiye.">Book service →</a>
+        </div>
       </article>
       <article class="service-card">
-        <div class="service-icon">💧</div><h3>Water Dispenser</h3>
+        <div class="service-image"><img src="https://images.unsplash.com/photo-1548838134-3ecf4b5b6c98?auto=format&fit=crop&w=900&q=85" alt="Water Dispenser service in Gujranwala" loading="lazy"></div><div class="service-content"><div class="service-icon"><span aria-hidden="true">✓</span></div><h3>Water Dispenser</h3>
         <p>Heating, cooling and dispenser troubleshooting.</p>
         <a class="service-link" href="https://wa.me/923054226888?text=Water%20dispenser%20service%20chahiye.">Book service →</a>
+        </div>
       </article>
       <article class="service-card">
-        <div class="service-icon">🪚</div><h3>Carpentry</h3>
+        <div class="service-image"><img src="https://images.unsplash.com/photo-1601058268499-e52658b8bb88?auto=format&fit=crop&w=900&q=85" alt="Carpentry service in Gujranwala" loading="lazy"></div><div class="service-content"><div class="service-icon"><span aria-hidden="true">✓</span></div><h3>Carpentry</h3>
         <p>Everyday home woodwork, adjustments and repair jobs.</p>
         <a class="service-link" href="https://wa.me/923054226888?text=Carpentry%20service%20chahiye.">Book service →</a>
+        </div>
       </article>
       <article class="service-card">
-        <div class="service-icon">🏠</div><h3>General Maintenance</h3>
+        <div class="service-image"><img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=85" alt="General Maintenance service in Gujranwala" loading="lazy"></div><div class="service-content"><div class="service-icon"><span aria-hidden="true">✓</span></div><h3>General Maintenance</h3>
         <p>Small home repair jobs handled through one convenient service.</p>
         <a class="service-link" href="https://wa.me/923054226888?text=General%20home%20maintenance%20chahiye.">Book service →</a>
+        </div>
       </article>
     </div>
   </div>
