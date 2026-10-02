@@ -3,653 +3,243 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#071827">
-<meta name="description" content="AI Home Care Gujranwala — AC, refrigerator, washing machine, electrical, plumbing, microwave, geyser, UPS and complete home repair services.">
-<meta name="keywords" content="home repair Gujranwala, AC repair Gujranwala, washing machine repair Gujranwala, electrician Gujranwala, plumber Gujranwala, AI Home Care">
-<title>AI Home Care | Home Repair & Maintenance in Gujranwala</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://images.unsplash.com">
-
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
-
+<meta name="description" content="AI Home Care Gujranwala - trusted professional home care and support services.">
+<title>AI Home Care | Gujranwala</title>
 <style>
 :root{
-  --navy:#071827;
-  --navy2:#0c2436;
-  --teal:#08a88a;
-  --teal2:#0bc59f;
-  --mint:#dffbf3;
-  --orange:#ffb547;
-  --white:#ffffff;
-  --ink:#10202d;
-  --muted:#607080;
-  --line:#e7edf1;
-  --soft:#f5f8fa;
-  --shadow:0 18px 55px rgba(7,24,39,.10);
-  --radius:22px;
-  --max:1180px;
+  --navy:#12304a;--blue:#1d6fa5;--sky:#eaf6fb;--teal:#35a6a0;
+  --text:#263746;--muted:#667786;--white:#fff;--line:#e5edf2;
+  --shadow:0 18px 50px rgba(18,48,74,.10);--radius:22px;
 }
-
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{
-  font-family:"DM Sans",sans-serif;
-  color:var(--ink);
-  background:#fff;
-  line-height:1.6;
-  overflow-x:hidden;
-}
-h1,h2,h3,h4{font-family:"Manrope",sans-serif;line-height:1.12}
+body{font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--text);line-height:1.6;background:#fff}
 a{text-decoration:none;color:inherit}
-img{max-width:100%;display:block}
-button,input,select,textarea{font:inherit}
-.container{width:min(var(--max),calc(100% - 40px));margin:auto}
-.section{padding:95px 0}
-.eyebrow{
-  display:inline-flex;align-items:center;gap:8px;
-  color:var(--teal);font-weight:800;font-size:.78rem;
-  letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px
+.container{width:min(1120px,92%);margin:auto}
+.top{background:var(--navy);color:#fff;font-size:13px;padding:9px 0}
+.top .container{display:flex;justify-content:space-between;gap:15px}
+nav{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;color:var(--navy)}
+.logo-mark{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--teal),var(--blue));display:grid;place-items:center;color:white;font-size:20px}
+.navlinks{display:flex;align-items:center;gap:28px;font-weight:600;font-size:14px}
+.navlinks a:hover{color:var(--blue)}
+.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:12px;padding:13px 20px;font-weight:750;cursor:pointer;transition:.2s}
+.btn-primary{background:var(--blue);color:#fff;box-shadow:0 10px 25px rgba(29,111,165,.22)}
+.btn-primary:hover{transform:translateY(-2px)}
+.btn-light{background:#fff;color:var(--navy);border:1px solid var(--line)}
+.menu{display:none;background:none;border:0;font-size:28px;color:var(--navy)}
+.hero{background:linear-gradient(135deg,#f4fbfd 0%,#e9f5fa 55%,#f8fcfd 100%);padding:82px 0 65px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.03fr .97fr;align-items:center;gap:55px}
+.eyebrow{color:var(--teal);font-weight:800;text-transform:uppercase;letter-spacing:1.6px;font-size:12px;margin-bottom:15px}
+h1{font-size:clamp(40px,5vw,66px);line-height:1.04;color:var(--navy);letter-spacing:-2px;margin-bottom:22px}
+.lead{font-size:18px;color:var(--muted);max-width:620px;margin-bottom:28px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero-art{position:relative;min-height:400px}
+.blob{position:absolute;inset:20px 0 0 20px;background:#d6edf3;border-radius:47% 53% 57% 43% / 43% 45% 55% 57%;transform:rotate(-8deg)}
+.art-card{position:absolute;inset:45px 25px 30px 45px;background:#fff;border-radius:30px;box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.art-card svg{width:90%;height:90%}
+.float{position:absolute;background:#fff;border-radius:16px;padding:12px 16px;box-shadow:var(--shadow);font-weight:750;color:var(--navy);font-size:13px}
+.float.one{left:0;top:80px}.float.two{right:0;bottom:55px}
+.stats{background:#fff;border-bottom:1px solid var(--line)}
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);padding:27px 0}
+.stat{text-align:center;border-right:1px solid var(--line)}
+.stat:last-child{border:0}.stat strong{display:block;font-size:29px;color:var(--navy)}.stat span{font-size:13px;color:var(--muted)}
+section{padding:88px 0}
+.section-head{text-align:center;max-width:720px;margin:0 auto 48px}
+.section-head h2{font-size:38px;line-height:1.15;color:var(--navy);margin-bottom:13px}
+.section-head p{color:var(--muted)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.step,.service,.why-card,.testimonial,.faq-item{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 10px 35px rgba(18,48,74,.05)}
+.step{padding:27px}.num{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--sky);color:var(--blue);font-weight:800;margin-bottom:20px}.step h3,.service h3{color:var(--navy);margin-bottom:8px}.step p,.service p{font-size:14px;color:var(--muted)}
+.services{background:#f7fbfc}
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.service{padding:28px;transition:.2s}.service:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.icon{width:52px;height:52px;border-radius:15px;background:var(--sky);display:grid;place-items:center;font-size:25px;margin-bottom:18px}
+.why-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:55px;align-items:center}
+.why-art{background:linear-gradient(145deg,#e8f6f8,#f7fcfd);border-radius:32px;min-height:390px;display:grid;place-items:center}
+.why-art svg{width:82%;height:82%}
+.why-list{display:grid;gap:16px;margin-top:25px}.why-card{padding:18px;display:flex;gap:15px;box-shadow:none}
+.check{width:32px;height:32px;flex:0 0 32px;border-radius:50%;background:#e4f6f0;color:#218d78;display:grid;place-items:center;font-weight:900}
+.testimonials{background:#f7fbfc}
+.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.testimonial{padding:27px}.stars{color:#e3a52c;letter-spacing:2px;margin-bottom:14px}.testimonial p{color:var(--muted);font-size:14px;margin-bottom:18px}.person{font-weight:800;color:var(--navy);font-size:14px}
+.cta{padding:75px 0}.cta-box{background:linear-gradient(135deg,var(--navy),#1e617e);border-radius:30px;padding:55px;display:flex;align-items:center;justify-content:space-between;gap:30px;color:#fff}.cta-box h2{font-size:38px;line-height:1.15;margin-bottom:10px}.cta-box p{color:#d8e9ef}
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.faq-item{padding:22px}.faq-item h3{font-size:16px;color:var(--navy);margin-bottom:7px}.faq-item p{font-size:14px;color:var(--muted)}
+.contact{background:#f7fbfc}.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:35px}.contact-card{background:#fff;border:1px solid var(--line);border-radius:25px;padding:30px;box-shadow:var(--shadow)}.contact-info{display:grid;gap:18px;margin-top:25px}.info{display:flex;gap:13px}.info b{display:block;color:var(--navy)}.info span{font-size:14px;color:var(--muted)}
+form{display:grid;gap:14px}label{font-size:13px;font-weight:700;color:var(--navy)}input,textarea{width:100%;border:1px solid #dce7ed;border-radius:12px;padding:13px;font:inherit;outline:0}input:focus,textarea:focus{border-color:var(--blue)}textarea{min-height:120px;resize:vertical}
+footer{background:var(--navy);color:#d9e7ed;padding:45px 0 25px}.footer-grid{display:flex;justify-content:space-between;gap:30px}.footer-brand{max-width:450px}.footer-brand h3{color:#fff;margin-bottom:10px}.footer-links{display:flex;gap:20px;font-size:14px}.copy{border-top:1px solid rgba(255,255,255,.13);margin-top:30px;padding-top:18px;font-size:12px;text-align:center}
+.whatsapp{position:fixed;right:20px;bottom:20px;z-index:30;width:58px;height:58px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;font-size:27px;box-shadow:0 12px 28px rgba(0,0,0,.2)}
+@media(max-width:850px){
+ .navlinks{display:none;position:absolute;top:76px;left:0;right:0;background:#fff;padding:20px;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}
+ .navlinks.open{display:flex}.menu{display:block}
+ .hero-grid,.why-grid,.contact-grid{grid-template-columns:1fr}.hero{padding-top:55px}.hero-art{min-height:350px}
+ .steps{grid-template-columns:1fr 1fr}.service-grid,.test-grid{grid-template-columns:1fr 1fr}
+ .cta-box{flex-direction:column;align-items:flex-start}.faq-grid{grid-template-columns:1fr}
 }
-.eyebrow:before{content:"";width:26px;height:2px;background:var(--teal)}
-.section-title{font-size:clamp(2rem,4vw,3.25rem);letter-spacing:-.045em}
-.section-lead{color:var(--muted);max-width:680px;margin-top:15px;font-size:1.04rem}
-.center{text-align:center}.center .section-lead{margin-left:auto;margin-right:auto}
-
-/* Header */
-.header{
-  position:sticky;top:0;z-index:1000;
-  background:rgba(255,255,255,.92);
-  backdrop-filter:blur(18px);
-  border-bottom:1px solid rgba(231,237,241,.9)
-}
-.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-.logo{display:flex;align-items:center;gap:11px;font-family:"Manrope",sans-serif;font-weight:800;font-size:1.2rem}
-.logo-mark{
-  width:42px;height:42px;border-radius:13px;background:var(--navy);
-  display:grid;place-items:center;box-shadow:0 8px 22px rgba(7,24,39,.18)
-}
-.logo-mark svg{width:25px;height:25px}
-.nav-links{display:flex;align-items:center;gap:27px;font-weight:700;font-size:.92rem}
-.nav-links a{color:#334552;transition:.2s}.nav-links a:hover{color:var(--teal)}
-.nav-cta{display:flex;gap:9px;align-items:center}
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:9px;
-  min-height:48px;padding:0 19px;border-radius:13px;font-weight:800;
-  border:1px solid transparent;cursor:pointer;transition:.2s
-}
-.btn:hover{transform:translateY(-2px)}
-.btn-primary{background:var(--teal);color:#fff;box-shadow:0 10px 25px rgba(8,168,138,.24)}
-.btn-primary:hover{background:#078f77}
-.btn-dark{background:var(--navy);color:#fff}
-.btn-outline{border-color:#dce5ea;color:var(--navy);background:#fff}
-.btn-white{background:#fff;color:var(--navy)}
-.menu{display:none;border:0;background:none;cursor:pointer}
-.menu span{display:block;width:24px;height:2px;background:var(--navy);margin:5px}
-
-/* Hero */
-.hero{
-  position:relative;overflow:hidden;background:
-  radial-gradient(circle at 78% 30%,rgba(8,168,138,.20),transparent 28%),
-  linear-gradient(135deg,#071827 0%,#0b2638 60%,#10384a 100%);
-  color:#fff;padding:75px 0 70px
-}
-.hero:after{
-  content:"";position:absolute;width:560px;height:560px;border:1px solid rgba(255,255,255,.06);
-  border-radius:50%;right:-190px;top:-180px;box-shadow:0 0 0 70px rgba(255,255,255,.018),0 0 0 140px rgba(255,255,255,.012)
-}
-.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:55px;position:relative;z-index:1}
-.badge{
-  display:inline-flex;align-items:center;gap:8px;padding:8px 12px;
-  border:1px solid rgba(255,255,255,.13);background:rgba(255,255,255,.07);
-  border-radius:999px;color:#dffbf3;font-size:.82rem;font-weight:700;margin-bottom:22px
-}
-.dot{width:8px;height:8px;border-radius:50%;background:var(--teal2);box-shadow:0 0 0 5px rgba(11,197,159,.12)}
-.hero h1{font-size:clamp(2.65rem,5.4vw,5.1rem);letter-spacing:-.065em;max-width:760px}
-.hero h1 span{color:#54e2c1}
-.hero-copy{color:#c4d2db;font-size:1.1rem;max-width:620px;margin:22px 0 28px}
-.hero-actions{display:flex;gap:11px;flex-wrap:wrap}
-.hero-actions .btn{min-height:54px;padding:0 21px}
-.hero-trust{display:flex;gap:22px;flex-wrap:wrap;margin-top:27px;color:#b9cbd5;font-size:.88rem}
-.hero-trust strong{color:#fff}
-.hero-trust span{display:flex;align-items:center;gap:7px}
-.hero-visual{position:relative}
-.hero-photo{
-  height:540px;border-radius:30px;overflow:hidden;position:relative;
-  border:1px solid rgba(255,255,255,.13);box-shadow:0 30px 80px rgba(0,0,0,.28)
-}
-.hero-photo img{width:100%;height:100%;object-fit:cover}
-.hero-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,24,39,.05),rgba(7,24,39,.60))}
-.hero-card{
-  position:absolute;left:-25px;bottom:25px;z-index:2;
-  background:#fff;color:var(--ink);border-radius:19px;padding:16px 18px;
-  box-shadow:var(--shadow);display:flex;align-items:center;gap:12px;min-width:230px
-}
-.avatar-stack{display:flex}.avatar{width:37px;height:37px;border-radius:50%;border:3px solid #fff;background:#d9e5e8;margin-left:-8px;object-fit:cover}.avatar:first-child{margin-left:0}
-.hero-card small{display:block;color:var(--muted);font-size:.72rem}.hero-card strong{font-size:.9rem}
-.float-tag{
-  position:absolute;right:-18px;top:28px;z-index:3;background:#fff;color:var(--navy);
-  padding:14px 16px;border-radius:16px;box-shadow:var(--shadow);font-weight:800
-}
-.float-tag small{display:block;color:var(--muted);font-weight:600}
-
-/* trust strip */
-.trust-strip{background:#fff;border-bottom:1px solid var(--line)}
-.trust-row{display:grid;grid-template-columns:repeat(4,1fr);padding:20px 0}
-.trust-item{display:flex;align-items:center;justify-content:center;gap:12px;border-right:1px solid var(--line);font-weight:800}
-.trust-item:last-child{border:0}.trust-icon{width:39px;height:39px;border-radius:12px;background:var(--mint);display:grid;place-items:center;color:var(--teal)}
-.trust-item small{display:block;color:var(--muted);font-weight:500;font-size:.72rem}
-
-/* services */
-.services{background:var(--soft)}
-.service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:38px}
-.service-card{
-  background:#fff;border:1px solid var(--line);border-radius:20px;
-  padding:0;transition:.25s;position:relative;overflow:hidden
-}
-.service-image{
-  height:175px;position:relative;overflow:hidden;background:#eaf2f3
-}
-.service-image img{
-  width:100%;height:100%;object-fit:cover;transition:.45s
-}
-.service-card:hover .service-image img{transform:scale(1.06)}
-.service-image:after{
-  content:"";position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(7,24,39,0) 45%,rgba(7,24,39,.28))
-}
-.service-content{padding:20px 21px 21px}
-.service-card .service-icon{width:46px;height:46px;border-radius:14px;margin-top:-43px;position:relative;z-index:2;border:3px solid #fff}
-.service-card .service-icon svg{width:24px;height:24px}
-
-.service-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:#cfe8e2}
-.service-icon{width:52px;height:52px;border-radius:16px;background:var(--mint);display:grid;place-items:center;color:var(--teal);margin-bottom:18px}
-.service-icon svg{width:27px;height:27px}
-.service-card h3{font-size:1.05rem;margin-bottom:7px}.service-card p{font-size:.87rem;color:var(--muted)}
-.service-link{display:inline-flex;align-items:center;gap:5px;margin-top:14px;color:var(--teal);font-size:.82rem;font-weight:800}
-
-/* feature split */
-.split{display:grid;grid-template-columns:.92fr 1.08fr;gap:70px;align-items:center}
-.image-stack{position:relative;padding:0 40px 35px 0}
-.main-photo{height:530px;border-radius:27px;object-fit:cover;width:100%;box-shadow:var(--shadow)}
-.small-photo{
-  position:absolute;right:0;bottom:0;width:47%;height:210px;object-fit:cover;
-  border:9px solid #fff;border-radius:23px;box-shadow:var(--shadow)
-}
-.experience{
-  position:absolute;left:-18px;top:35px;background:var(--navy);color:#fff;padding:18px 20px;border-radius:17px;box-shadow:var(--shadow)
-}
-.experience strong{font-size:1.8rem;display:block;color:#62e5c6}
-.feature-list{display:grid;gap:22px;margin-top:31px}
-.feature{display:flex;gap:15px}
-.feature-icon{flex:0 0 46px;width:46px;height:46px;border-radius:14px;background:#edf9f6;color:var(--teal);display:grid;place-items:center}
-.feature h3{font-size:1rem;margin-bottom:3px}.feature p{font-size:.88rem;color:var(--muted)}
-
-/* process */
-.process{background:var(--navy);color:#fff}
-.process .section-lead{color:#a9bcc7}
-.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:42px}
-.step{position:relative;padding:28px;border:1px solid rgba(255,255,255,.10);background:rgba(255,255,255,.045);border-radius:20px}
-.step-num{font-family:"Manrope";font-size:2.3rem;font-weight:800;color:#54e2c1;margin-bottom:28px}
-.step h3{font-size:1.05rem;margin-bottom:8px}.step p{color:#a9bcc7;font-size:.87rem}
-
-/* gallery */
-.gallery-grid{display:grid;grid-template-columns:1.2fr .8fr .8fr;grid-template-rows:230px 230px;gap:14px;margin-top:38px}
-.gallery-item{border-radius:20px;overflow:hidden;position:relative}
-.gallery-item:first-child{grid-row:1 / 3}
-.gallery-item img{width:100%;height:100%;object-fit:cover;transition:.5s}
-.gallery-item:hover img{transform:scale(1.05)}
-.gallery-item:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.55))}
-.gallery-caption{position:absolute;left:18px;bottom:16px;color:#fff;z-index:2;font-weight:800}
-
-/* reviews */
-.review-section{background:var(--soft)}
-.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px;margin-top:38px}
-.review{background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px}
-.stars{color:#f4a825;letter-spacing:2px;margin-bottom:14px}
-.review p{color:#4f606d;font-size:.93rem}.review-user{display:flex;align-items:center;gap:11px;margin-top:19px}
-.review-avatar{width:40px;height:40px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-weight:800}
-.review-user small{display:block;color:var(--muted)}
-
-/* areas + faq */
-.two-col{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:start}
-.area-box{margin-top:28px;display:flex;flex-wrap:wrap;gap:9px}
-.area{padding:10px 13px;border-radius:999px;background:var(--soft);border:1px solid var(--line);font-size:.84rem;font-weight:700}
-.faq{border-top:1px solid var(--line)}
-details{border-bottom:1px solid var(--line);padding:18px 0}
-summary{cursor:pointer;list-style:none;font-weight:800;padding-right:20px;position:relative}
-summary::-webkit-details-marker{display:none}
-summary:after{content:"+";position:absolute;right:0;font-size:1.3rem;color:var(--teal)}
-details[open] summary:after{content:"−"}
-details p{color:var(--muted);font-size:.9rem;margin-top:10px;padding-right:20px}
-
-/* CTA */
-.cta{padding:35px 0 90px}
-.cta-box{
-  border-radius:30px;background:linear-gradient(135deg,var(--navy),#0d3949);
-  padding:55px;display:flex;align-items:center;justify-content:space-between;gap:30px;color:#fff;overflow:hidden;position:relative
-}
-.cta-box:after{content:"";position:absolute;width:300px;height:300px;border-radius:50%;right:-100px;top:-130px;background:rgba(8,168,138,.15)}
-.cta-box > *{position:relative;z-index:1}
-.cta-box h2{font-size:clamp(1.8rem,4vw,3rem);letter-spacing:-.045em}
-.cta-box p{color:#b8cbd4;margin-top:9px}.cta-actions{display:flex;gap:10px;flex-wrap:wrap;flex-shrink:0}
-
-/* footer */
-.footer{background:#05121d;color:#fff;padding:60px 0 25px}
-.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:45px}
-.footer .logo{color:#fff}.footer p{color:#9eb2bd;font-size:.88rem;margin-top:15px;max-width:330px}
-.footer h4{margin-bottom:14px}.footer a{display:block;color:#9eb2bd;font-size:.86rem;margin:8px 0}.footer a:hover{color:#fff}
-.footer-bottom{border-top:1px solid rgba(255,255,255,.08);margin-top:40px;padding-top:20px;color:#78909d;font-size:.78rem;display:flex;justify-content:space-between;gap:15px}
-
-/* floating mobile */
-.floating{position:fixed;right:18px;bottom:18px;z-index:900;width:58px;height:58px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;box-shadow:0 12px 30px rgba(0,0,0,.22)}
-.mobile-bar{display:none}
-
-/* responsive */
-@media(max-width:1050px){
-  .nav-links{gap:16px}.service-grid{grid-template-columns:repeat(3,1fr)}
-  .hero-grid{gap:35px}.hero-photo{height:500px}
-}
-@media(max-width:800px){
-  .container{width:min(var(--max),calc(100% - 28px))}
-  .nav{height:68px}.nav-links,.nav-cta{display:none}.menu{display:block}
-  .nav.mobile-open .nav-links{
-    display:flex;position:absolute;top:68px;left:0;right:0;background:#fff;
-    flex-direction:column;align-items:flex-start;padding:20px 22px;border-bottom:1px solid var(--line);box-shadow:0 15px 30px rgba(0,0,0,.08)
-  }
-  .hero{padding:48px 0 55px}.hero-grid,.split,.two-col{grid-template-columns:1fr}
-  .hero h1{font-size:clamp(2.45rem,12vw,4rem)}
-  .hero-photo{height:390px}.hero-card{left:12px}.float-tag{right:10px}
-  .trust-row{grid-template-columns:repeat(2,1fr)}.trust-item{padding:12px;border-bottom:1px solid var(--line)}
-  .trust-item:nth-child(2){border-right:0}.trust-item:nth-child(3),.trust-item:nth-child(4){border-bottom:0}
-  .section{padding:70px 0}.service-grid{grid-template-columns:repeat(2,1fr)}
-  .split{gap:40px}.image-stack{padding-right:20px}.main-photo{height:410px}.small-photo{height:160px}
-  .process-grid{grid-template-columns:repeat(2,1fr)}.gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:210px 210px}
-  .gallery-item:first-child{grid-row:auto}.review-grid{grid-template-columns:1fr}
-  .cta-box{padding:38px 27px;display:block}.cta-actions{margin-top:22px}
-  .footer-grid{grid-template-columns:1fr 1fr}.mobile-bar{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:800;background:#fff;border-top:1px solid var(--line);padding:8px;gap:8px}
-  .mobile-bar a{flex:1}.floating{bottom:75px}
-}
-@media(max-width:500px){
-  .service-grid,.process-grid,.footer-grid{grid-template-columns:1fr}
-  .gallery-grid{grid-template-columns:1fr;grid-template-rows:230px 180px 180px 180px}
-  .gallery-item:first-child{grid-row:auto}
-  .hero-actions .btn{width:100%}.hero-trust{gap:12px;flex-direction:column}
-  .trust-item{font-size:.82rem}.trust-item small{font-size:.66rem}
-  .hero-photo{height:340px}.hero-card{min-width:205px}.float-tag{top:14px}
+@media(max-width:560px){
+ .top .container{flex-direction:column;text-align:center;gap:3px}.nav{height:68px}.navlinks{top:68px}
+ .hero-art{min-height:290px}.float{display:none}.art-card{inset:25px 10px}.stats-grid{grid-template-columns:1fr}.stat{border-right:0;border-bottom:1px solid var(--line);padding:12px}.stat:last-child{border-bottom:0}
+ section{padding:65px 0}.section-head h2{font-size:30px}.steps,.service-grid,.test-grid{grid-template-columns:1fr}
+ .cta-box{padding:35px 25px}.cta-box h2{font-size:30px}.footer-grid{flex-direction:column}.footer-links{flex-wrap:wrap}
 }
 </style>
 </head>
-
 <body>
 
-<header class="header">
-  <div class="container nav" id="nav">
-    <a class="logo" href="#top" aria-label="AI Home Care home">
-      <span class="logo-mark">
-        <svg viewBox="0 0 32 32" fill="none">
-          <path d="M4 15.5 16 5l12 10.5V28H4V15.5Z" stroke="white" stroke-width="2.4" stroke-linejoin="round"/>
-          <path d="M12 28V18h8v10M9 14h14" stroke="#54e2c1" stroke-width="2.4" stroke-linecap="round"/>
-        </svg>
-      </span>
-      AI Home Care
-    </a>
+<div class="top"><div class="container"><span>Professional home care & support in Gujranwala</span><span>Available for enquiries • Mon–Sat</span></div></div>
 
-    <div class="nav-links">
-      <a href="#services">Services</a>
-      <a href="#why-us">Why Us</a>
-      <a href="#work">Our Work</a>
-      <a href="#areas">Areas</a>
-      <a href="#faq">FAQ</a>
-    </div>
-
-    <div class="nav-cta">
-      <a class="btn btn-outline" href="tel:+923054226888">Call Now</a>
-      <a class="btn btn-primary" href="https://wa.me/923054226888?text=Assalam-o-Alaikum%2C%20mujhe%20home%20repair%20service%20chahiye.">WhatsApp</a>
-    </div>
-
-    <button class="menu" id="menuBtn" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</header>
-
-<main id="top">
-
-<section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <div class="badge"><span class="dot"></span> Home Repair & Maintenance • Gujranwala</div>
-      <h1>Ghar ki har repair,<br><span>ek call par.</span></h1>
-      <p class="hero-copy">
-        AC, refrigerator, washing machine, electrical, plumbing aur home appliances —
-        trusted technician aap ke ghar tak.
-      </p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="https://wa.me/923054226888?text=Assalam-o-Alaikum%2C%20mujhe%20AI%20Home%20Care%20se%20service%20book%20karni%20hai.">
-          WhatsApp par Book Karein
-        </a>
-        <a class="btn btn-white" href="tel:+923054226888">📞 0305 4226888</a>
-      </div>
-      <div class="hero-trust">
-        <span>✓ <strong>Home Visit</strong></span>
-        <span>✓ <strong>Clear Estimate</strong></span>
-        <span>✓ <strong>Service Warranty</strong></span>
-      </div>
-    </div>
-
-    <div class="hero-visual">
-      <div class="hero-photo">
-        <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1200&q=88" alt="Professional home service technician">
-      </div>
-
-      <div class="float-tag">
-        <span>⚡ Fast Response</span>
-        <small>Gujranwala home service</small>
-      </div>
-
-      <div class="hero-card">
-        <div class="avatar-stack">
-          <img class="avatar" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=120&q=80" alt="">
-          <img class="avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80" alt="">
-          <img class="avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="">
-        </div>
-        <div>
-          <small>Need a technician?</small>
-          <strong>Book your home visit</strong>
-        </div>
-      </div>
+<nav>
+  <div class="container nav">
+    <a class="logo" href="#home"><span class="logo-mark">♥</span>AI Home Care</a>
+    <button class="menu" onclick="toggleMenu()" aria-label="Open menu">☰</button>
+    <div class="navlinks" id="navlinks">
+      <a href="#home">Home</a><a href="#services">Services</a><a href="#about">About</a>
+      <a href="#faq">FAQ</a><a href="#contact" class="btn btn-primary">Contact Us</a>
     </div>
   </div>
+</nav>
+
+<main>
+<section class="hero" id="home">
+<div class="container hero-grid">
+  <div>
+    <div class="eyebrow">Compassionate care • Gujranwala</div>
+    <h1>Trusted home care for the people who matter most.</h1>
+    <p class="lead">Reliable, respectful and compassionate support designed around the comfort, dignity and everyday needs of your loved ones.</p>
+    <div class="actions"><a class="btn btn-primary" href="#contact">Request a Callback</a><a class="btn btn-light" href="#services">Explore Services</a></div>
+  </div>
+  <div class="hero-art">
+    <div class="blob"></div>
+    <div class="art-card">
+      <svg viewBox="0 0 500 390" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="250" cy="180" r="125" fill="#eaf6fb"/>
+        <path d="M135 315c18-75 61-105 115-105s97 30 115 105" fill="#1d6fa5"/>
+        <circle cx="250" cy="125" r="55" fill="#f3c7a9"/>
+        <path d="M196 117c5-58 104-65 111 7-22-21-52-28-111-7z" fill="#4a3b3a"/>
+        <path d="M160 295c22-43 52-65 90-65s68 22 90 65" fill="#35a6a0"/>
+        <path d="M187 182c17 23 42 34 63 34s46-11 63-34" fill="none" stroke="#d89d83" stroke-width="7" stroke-linecap="round"/>
+        <circle cx="230" cy="125" r="5" fill="#263746"/><circle cx="270" cy="125" r="5" fill="#263746"/>
+        <path d="M242 146q8 7 16 0" fill="none" stroke="#263746" stroke-width="4" stroke-linecap="round"/>
+        <path d="M105 320h290" stroke="#b9dce5" stroke-width="8" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="float one">✓ Caring & respectful</div><div class="float two">★ Family-focused</div>
+  </div>
+</div>
 </section>
 
-<section class="trust-strip">
-  <div class="container trust-row">
-    <div class="trust-item"><span class="trust-icon">✓</span><div>Home Visit<small>Technician at your door</small></div></div>
-    <div class="trust-item"><span class="trust-icon">₨</span><div>Clear Estimate<small>Approval before repair</small></div></div>
-    <div class="trust-item"><span class="trust-icon">🛠</span><div>Multi-Service<small>One call, many repairs</small></div></div>
-    <div class="trust-item"><span class="trust-icon">★</span><div>Warranty Support<small>Service after repair</small></div></div>
-  </div>
-</section>
+<div class="stats"><div class="container stats-grid">
+  <div class="stat"><strong>24/7</strong><span>Support-focused approach</span></div>
+  <div class="stat"><strong>6+</strong><span>Core care services</span></div>
+  <div class="stat"><strong>100%</strong><span>Personalized care plans</span></div>
+</div></div>
 
-<section class="section services" id="services">
-  <div class="container">
-    <div class="center">
-      <div class="eyebrow">Our Services</div>
-      <h2 class="section-title">One team for your everyday home problems.</h2>
-      <p class="section-lead">From cooling and appliances to plumbing and electrical work, AI Home Care brings practical repair solutions to your doorstep.</p>
-    </div>
+<section id="about"><div class="container">
+<div class="section-head"><div class="eyebrow">How we work</div><h2>Simple care, thoughtfully delivered.</h2><p>We make getting the right support straightforward, transparent and centered around each family's needs.</p></div>
+<div class="steps">
+<div class="step"><div class="num">01</div><h3>Talk to us</h3><p>Tell us about your loved one's needs, routine and preferences.</p></div>
+<div class="step"><div class="num">02</div><h3>Understand needs</h3><p>We discuss the right level of support and practical requirements.</p></div>
+<div class="step"><div class="num">03</div><h3>Create a plan</h3><p>A clear care approach is shaped around comfort, dignity and routine.</p></div>
+<div class="step"><div class="num">04</div><h3>Start support</h3><p>Our goal is to provide dependable care with ongoing communication.</p></div>
+</div></div></section>
 
-    <div class="service-grid">
-      <article class="service-card">
-        <div class="service-image"><img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=900&q=85" alt="AC Repair service in Gujranwala" loading="lazy"></div><div class="service-content"><div class="service-icon"><span aria-hidden="true">✓</span></div><h3>AC Repair</h3>
-        <p>Cooling issue, gas, service, installation and maintenance.</p>
-        <a class="service-link" href="https://wa.me/923054226888?text=AC%20repair%20service%20chahiye.">Book service →</a>
-        </div>
-      </article>
-      <article class="service-card">
-        <div class="service-image"><img src="https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?auto=format&fit=crop&w=900&q=85" alt="Refrigerator service in Gujranwala" loading="lazy"></div><div class="service-content"><div class="service-icon"><span aria-hidden="true">✓</span></div><h3>Refrigerator</h3>
-        <p>Cooling, leakage, compressor and general fridge repairs.</p>
-        <a class="service-link" href="https://wa.me/923054226888?text=Refrigerator%20repair%20service%20chahiye.">Book service →</a>
-        </div>
-      </article>
-      <article class="service-card">
-        <div class="service-image"><img src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?auto=format&fit=crop&w=900&q=85" alt="Washing Machine service in Gujranwala" loading="lazy"></div><div class="service-content"><div class="service-icon"><span aria-hidden="true">✓</span></div><h3>Washing Machine</h3>
-        <p>Automatic washing machine diagnosis and repair.</p>
-        <a class="service-link" href="https://wa.me/923054226888?text=Washing%20machine%20repair%20service%20chahiye.">Book service →</a>
-        </div>
-      </article>
-      <article class="service-card">
-        <div class="service-image"><img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=900&q=85" alt="Electrical service in Gujranwala" loading="lazy"></div><div class="service-content"><div class="service-icon"><span aria-hidden="true">✓</span></div><h3>Electrical</h3>
-        <p>Home electrical faults, switches, wiring and related work.</p>
-        <a class="service-link" href="https://wa.me/923054226888?text=Electrical%20service%20chahiye.">Book service →</a>
-        </div>
-      </article>
-      <article class="service-card">
-        <div class="service-image"><img src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?auto=format&fit=crop&w=900&q=85" alt="Plumbing service in Gujranwala" loading="lazy"></div><div class="service-content"><div class="service-icon"><span aria-hidden="true">✓</span></div><h3>Plumbing</h3>
-        <p>Leaks, taps, pipes, drainage and everyday plumbing jobs.</p>
-        <a class="service-link" href="https://wa.me/923054226888?text=Plumbing%20service%20chahiye.">Book service →</a>
-        </div>
-      </article>
-      <article class="service-card">
-        <div class="service-image"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgNTAwIj48cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iI2VlZjdmNyIvPjxjaXJjbGUgY3g9IjY5MCIgY3k9IjkwIiByPSIxMjAiIGZpbGw9IiNkOGYxZWQiLz48cmVjdCB4PSIyNTAiIHk9IjE0NSIgd2lkdGg9IjMwMCIgaGVpZ2h0PSIyMzAiIHJ4PSIyMiIgZmlsbD0iIzE4MmIzZCIvPjxyZWN0IHg9IjI4MCIgeT0iMTgwIiB3aWR0aD0iMjQwIiBoZWlnaHQ9IjgwIiByeD0iMTIiIGZpbGw9IiMwYjE2MjIiLz48Y2lyY2xlIGN4PSIzMzAiIGN5PSIyMjAiIHI9IjEzIiBmaWxsPSIjMjNjN2E1Ii8+PGNpcmNsZSBjeD0iMzc1IiBjeT0iMjIwIiByPSIxMyIgZmlsbD0iIzIzYzdhNSIvPjxyZWN0IHg9IjMxNSIgeT0iMzAwIiB3aWR0aD0iMTcwIiBoZWlnaHQ9IjE0IiByeD0iNyIgZmlsbD0iIzIzYzdhNSIvPjxwYXRoIGQ9Ik0yMjAgNDA1aDM2MCIgc3Ryb2tlPSIjMTgyYjNkIiBzdHJva2Utd2lkdGg9IjI0IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48dGV4dCB4PSI0MDAiIHk9IjQ2NSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMzAiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxODJiM2QiPlVQUzwvdGV4dD48dGV4dCB4PSI0MDAiIHk9IjQ5MiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZpbGw9IiM1MjY1NzUiPkhvbWUgcG93ZXIgYmFja3VwICYgcmVwYWlyPC90ZXh0Pjwvc3ZnPg==" alt="UPS repair service in Gujranwala" loading="lazy"></div><div class="service-content"><div class="service-icon"><span aria-hidden="true">✓</span></div><h3>UPS</h3>
-        <p>UPS, inverter and battery troubleshooting and repair.</p>
-        <a class="service-link" href="https://wa.me/923054226888?text=UPS%20service%20chahiye.">Book service →</a>
-        </div>
-      </article>
-      <article class="service-card">
-        <div class="service-image"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgNTAwIj48cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iI2VlZjdmNyIvPjxjaXJjbGUgY3g9IjY5MCIgY3k9IjkwIiByPSIxMjAiIGZpbGw9IiNkOGYxZWQiLz48cmVjdCB4PSIzMDAiIHk9IjEwNSIgd2lkdGg9IjIwMCIgaGVpZ2h0PSIzMDAiIHJ4PSIzNSIgZmlsbD0iI2U4ZWVmMyIgc3Ryb2tlPSIjMTgyYjNkIiBzdHJva2Utd2lkdGg9IjEwIi8+PHJlY3QgeD0iMzQwIiB5PSIxNTUiIHdpZHRoPSIxMjAiIGhlaWdodD0iNjAiIHJ4PSIxMiIgZmlsbD0iIzE4MmIzZCIvPjxjaXJjbGUgY3g9IjQwMCIgY3k9IjI1MCIgcj0iMjAiIGZpbGw9IiMyM2M3YTUiLz48cGF0aCBkPSJNMzYwIDQwNXY0NU00NDAgNDA1djQ1IiBzdHJva2U9IiMxODJiM2QiIHN0cm9rZS13aWR0aD0iMTQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxwYXRoIGQ9Ik01MDAgMjA1aDY1djExMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMTgyYjNkIiBzdHJva2Utd2lkdGg9IjEyIi8+PHBhdGggZD0iTTU2NSAzMTVjMCA0MCAzNSA0NSAzNSA3NSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjNjN2E1IiBzdHJva2Utd2lkdGg9IjEwIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48dGV4dCB4PSI0MDAiIHk9IjQ2NSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMzAiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMxODJiM2QiPkdFWVNFUjwvdGV4dD48dGV4dCB4PSI0MDAiIHk9IjQ5MiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkFyaWFsLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTciIGZpbGw9IiM1MjY1NzUiPldhdGVyIGhlYXRlciBzZXJ2aWNlPC90ZXh0Pjwvc3ZnPg==" alt="Geyser repair service in Gujranwala" loading="lazy"></div><div class="service-content"><div class="service-icon"><span aria-hidden="true">✓</span></div><h3>Geyser</h3>
-        <p>Geyser heating, thermostat and water-heating repair service.</p>
-        <a class="service-link" href="https://wa.me/923054226888?text=Geyser%20service%20chahiye.">Book service →</a>
-        </div>
-      </article>
-      <article class="service-card">
-        <div class="service-image"><img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=900&q=85" alt="Kitchen Hood service in Gujranwala" loading="lazy"></div><div class="service-content"><div class="service-icon"><span aria-hidden="true">✓</span></div><h3>Kitchen Hood</h3>
-        <p>Kitchen hood cleaning, faults and repair assistance.</p>
-        <a class="service-link" href="https://wa.me/923054226888?text=Kitchen%20hood%20service%20chahiye.">Book service →</a>
-        </div>
-      </article>
-      <article class="service-card">
-        <div class="service-image"><img src="https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?auto=format&fit=crop&w=900&q=85" alt="Microwave Oven service in Gujranwala" loading="lazy"></div><div class="service-content"><div class="service-icon"><span aria-hidden="true">✓</span></div><h3>Microwave Oven</h3>
-        <p>Microwave diagnosis and common appliance repairs.</p>
-        <a class="service-link" href="https://wa.me/923054226888?text=Microwave%20repair%20service%20chahiye.">Book service →</a>
-        </div>
-      </article>
-      <article class="service-card">
-        <div class="service-image"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgNTAwIj48cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iI2VlZjdmNyIvPjxjaXJjbGUgY3g9IjY5MCIgY3k9IjkwIiByPSIxMjAiIGZpbGw9IiNkOGYxZWQiLz48cmVjdCB4PSIzMjUiIHk9IjExMCIgd2lkdGg9IjE1MCIgaGVpZ2h0PSIyOTAiIHJ4PSIyOCIgZmlsbD0iI2U4ZWVmMyIgc3Ryb2tlPSIjMTgyYjNkIiBzdHJva2Utd2lkdGg9IjEwIi8+PHJlY3QgeD0iMzUwIiB5PSIxNjAiIHdpZHRoPSIxMDAiIGhlaWdodD0iNTUiIHJ4PSIxMCIgZmlsbD0iIzE4MmIzZCIvPjxjaXJjbGUgY3g9IjM3NSIgY3k9IjE4OCIgcj0iNyIgZmlsbD0iIzIzYzdhNSIvPjxjaXJjbGUgY3g9IjQyNSIgY3k9IjE4OCIgcj0iNyIgZmlsbD0iIzIzYzdhNSIvPjxwYXRoIGQ9Ik00NzUgMjEwaDc1djcwaC00NSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMTgyYjNkIiBzdHJva2Utd2lkdGg9IjEyIi8+PHBhdGggZD0iTTUwNSAyODBjMCA0NSAzNSA0NSAzNSA4MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjNjN2E1IiBzdHJva2Utd2lkdGg9IjEwIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cGF0aCBkPSJNMzUwIDQyMGgxMDAiIHN0cm9rZT0iIzE4MmIzZCIgc3Ryb2tlLXdpZHRoPSIxNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHRleHQgeD0iNDAwIiB5PSI0NjUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjMwIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMTgyYjNkIj5XQVRFUiBESVNQRU5TRVI8L3RleHQ+PHRleHQgeD0iNDAwIiB5PSI0OTIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCxzYW5zLXNlcmlmIiBmb250LXNpemU9IjE3IiBmaWxsPSIjNTI2NTc1Ij5Ib3QgJiBjb2xkIHdhdGVyIHNlcnZpY2U8L3RleHQ+PC9zdmc+" alt="Water Dispenser service in Gujranwala" loading="lazy"></div><div class="service-content"><div class="service-icon"><span aria-hidden="true">✓</span></div><h3>Water Dispenser</h3>
-        <p>Heating, cooling and dispenser troubleshooting.</p>
-        <a class="service-link" href="https://wa.me/923054226888?text=Water%20dispenser%20service%20chahiye.">Book service →</a>
-        </div>
-      </article>
-      <article class="service-card">
-        <div class="service-image"><img src="https://images.unsplash.com/photo-1601058268499-e52658b8bb88?auto=format&fit=crop&w=900&q=85" alt="Carpentry service in Gujranwala" loading="lazy"></div><div class="service-content"><div class="service-icon"><span aria-hidden="true">✓</span></div><h3>Carpentry</h3>
-        <p>Everyday home woodwork, adjustments and repair jobs.</p>
-        <a class="service-link" href="https://wa.me/923054226888?text=Carpentry%20service%20chahiye.">Book service →</a>
-        </div>
-      </article>
-      <article class="service-card">
-        <div class="service-image"><img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=85" alt="General Maintenance service in Gujranwala" loading="lazy"></div><div class="service-content"><div class="service-icon"><span aria-hidden="true">✓</span></div><h3>General Maintenance</h3>
-        <p>Small home repair jobs handled through one convenient service.</p>
-        <a class="service-link" href="https://wa.me/923054226888?text=General%20home%20maintenance%20chahiye.">Book service →</a>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
+<section class="services" id="services"><div class="container">
+<div class="section-head"><div class="eyebrow">Our services</div><h2>Support that fits everyday life.</h2><p>Flexible home-care support for individuals and families in Gujranwala.</p></div>
+<div class="service-grid">
+<div class="service"><div class="icon">🏠</div><h3>Home Support</h3><p>Practical help with everyday household routines and personal comfort.</p></div>
+<div class="service"><div class="icon">🤝</div><h3>Companionship</h3><p>Friendly social support that helps reduce isolation and encourages connection.</p></div>
+<div class="service"><div class="icon">🧓</div><h3>Senior Care</h3><p>Respectful assistance for older adults with routines and daily activities.</p></div>
+<div class="service"><div class="icon">💊</div><h3>Medication Support</h3><p>Routine reminders and support around an individual's established medication plan.</p></div>
+<div class="service"><div class="icon">🚗</div><h3>Appointments & Errands</h3><p>Support with essential errands and getting to important appointments.</p></div>
+<div class="service"><div class="icon">❤️</div><h3>Personalized Care</h3><p>Care arrangements can be tailored to individual preferences and circumstances.</p></div>
+</div></div></section>
 
-<section class="section" id="why-us">
-  <div class="container split">
-    <div class="image-stack">
-      <img class="main-photo" src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1000&q=88" alt="Home maintenance professional at work">
-      <img class="small-photo" src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=600&q=88" alt="Technician working on home equipment">
-      <div class="experience"><strong>1 Call</strong>Multiple home services</div>
-    </div>
+<section><div class="container why-grid">
+<div class="why-art">
+<svg viewBox="0 0 420 360" xmlns="http://www.w3.org/2000/svg">
+<rect x="55" y="55" width="310" height="245" rx="35" fill="#fff"/>
+<circle cx="210" cy="145" r="62" fill="#eaf6fb"/>
+<path d="M150 292c10-67 34-94 60-94s50 27 60 94" fill="#35a6a0"/>
+<circle cx="210" cy="130" r="34" fill="#f3c7a9"/>
+<path d="M177 127c5-39 62-48 68 4-21-15-43-18-68-4z" fill="#4a3b3a"/>
+<path d="M198 151q12 9 24 0" fill="none" stroke="#a36f63" stroke-width="4" stroke-linecap="round"/>
+<circle cx="198" cy="132" r="3.5" fill="#263746"/><circle cx="222" cy="132" r="3.5" fill="#263746"/>
+<path d="M85 270h250" stroke="#d4e9ee" stroke-width="7" stroke-linecap="round"/>
+</svg>
+</div>
+<div>
+<div class="eyebrow">Why AI Home Care</div><h2 style="font-size:40px;color:var(--navy);line-height:1.15">Care built around people, not just tasks.</h2>
+<p class="lead" style="font-size:16px;margin-top:15px">Our approach focuses on respectful communication, consistency and practical support that makes home life easier.</p>
+<div class="why-list">
+<div class="why-card"><div class="check">✓</div><div><b>Respect & dignity</b><p>We treat every person with patience and respect.</p></div></div>
+<div class="why-card"><div class="check">✓</div><div><b>Personalized approach</b><p>Support can be shaped around individual routines and preferences.</p></div></div>
+<div class="why-card"><div class="check">✓</div><div><b>Clear communication</b><p>Families can stay informed and involved in the care journey.</p></div></div>
+</div></div></div></section>
 
-    <div>
-      <div class="eyebrow">Why AI Home Care</div>
-      <h2 class="section-title">Repair service that feels organized, not stressful.</h2>
-      <p class="section-lead">A simple process, clear communication and a single number for your home's everyday repair needs.</p>
+<section class="testimonials"><div class="container">
+<div class="section-head"><div class="eyebrow">Family feedback</div><h2>What families value about caring support.</h2></div>
+<div class="test-grid">
+<div class="testimonial"><div class="stars">★★★★★</div><p>“The team was kind, patient and easy to communicate with. It made our family's routine much more manageable.”</p><div class="person">— Family member</div></div>
+<div class="testimonial"><div class="stars">★★★★★</div><p>“We appreciated the respectful approach and the attention given to everyday needs.”</p><div class="person">— Client family</div></div>
+<div class="testimonial"><div class="stars">★★★★★</div><p>“Having dependable support at home gave us greater peace of mind.”</p><div class="person">— Family member</div></div>
+</div></div></section>
 
-      <div class="feature-list">
-        <div class="feature">
-          <div class="feature-icon">✓</div>
-          <div><h3>Clear diagnosis before work</h3><p>We aim to explain the problem and estimate before proceeding with repair work.</p></div>
-        </div>
-        <div class="feature">
-          <div class="feature-icon">📱</div>
-          <div><h3>Easy booking on WhatsApp</h3><p>Send your problem, photo or video and get the booking process started quickly.</p></div>
-        </div>
-        <div class="feature">
-          <div class="feature-icon">🧰</div>
-          <div><h3>Multi-service convenience</h3><p>AC, appliances, electrical, plumbing and more under one home-care brand.</p></div>
-        </div>
-        <div class="feature">
-          <div class="feature-icon">🛡</div>
-          <div><h3>Service support</h3><p>Where applicable, service warranty details are communicated with the customer after repair.</p></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<section class="cta"><div class="container"><div class="cta-box">
+<div><h2>Let's talk about the care you need.</h2><p>Contact AI Home Care to discuss your requirements in Gujranwala.</p></div>
+<a class="btn btn-light" href="#contact">Get in Touch →</a>
+</div></div></section>
 
-<section class="section process">
-  <div class="container">
-    <div class="center">
-      <div class="eyebrow">How It Works</div>
-      <h2 class="section-title">From WhatsApp message to repaired home.</h2>
-      <p class="section-lead">Four simple steps — no complicated booking system.</p>
-    </div>
+<section id="faq"><div class="container">
+<div class="section-head"><div class="eyebrow">FAQ</div><h2>Common questions.</h2></div>
+<div class="faq-grid">
+<div class="faq-item"><h3>Where do you provide care?</h3><p>AI Home Care is presented for families seeking home-care support in Gujranwala and surrounding areas.</p></div>
+<div class="faq-item"><h3>Can care be personalized?</h3><p>Yes. Support can be discussed around the individual's routine, preferences and practical needs.</p></div>
+<div class="faq-item"><h3>How do I request a callback?</h3><p>Use the contact form below. It will open WhatsApp with your enquiry ready to send.</p></div>
+<div class="faq-item"><h3>How quickly can I get a response?</h3><p>Response times depend on enquiry volume and availability. We aim to respond as soon as practical.</p></div>
+</div></div></section>
 
-    <div class="process-grid">
-      <div class="step"><div class="step-num">01</div><h3>Tell us the problem</h3><p>Call or WhatsApp us with the issue and, if possible, a photo or video.</p></div>
-      <div class="step"><div class="step-num">02</div><h3>Book a visit</h3><p>We arrange a suitable technician visit for your service request.</p></div>
-      <div class="step"><div class="step-num">03</div><h3>Diagnosis & estimate</h3><p>The technician checks the issue and explains the required work and cost.</p></div>
-      <div class="step"><div class="step-num">04</div><h3>Repair & support</h3><p>After approval, the repair is completed and service support is explained.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="work">
-  <div class="container">
-    <div>
-      <div class="eyebrow">Our Work</div>
-      <h2 class="section-title">Real work should speak for itself.</h2>
-      <p class="section-lead">Replace these sample visuals with your own technician and completed-job photos as AI Home Care grows.</p>
-    </div>
-
-    <div class="gallery-grid">
-      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=1000&q=85" alt="Technician service work"><div class="gallery-caption">Professional Home Visit</div></div>
-      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=85" alt="Technician tools"><div class="gallery-caption">Tools & Diagnosis</div></div>
-      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=85" alt="Electrical maintenance"><div class="gallery-caption">Electrical Work</div></div>
-      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1635274605635-df96b5b2f4d5?auto=format&fit=crop&w=800&q=85" alt="Home repair"><div class="gallery-caption">Home Maintenance</div></div>
-      <div class="gallery-item"><img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=85" alt="Maintenance technician"><div class="gallery-caption">Repair & Maintenance</div></div>
-    </div>
-  </div>
-</section>
-
-<section class="section review-section">
-  <div class="container">
-    <div class="center">
-      <div class="eyebrow">Customer Reviews</div>
-      <h2 class="section-title">Your real reviews will live here.</h2>
-      <p class="section-lead">As customers leave genuine Google reviews, replace these placeholders with their exact feedback. Never publish made-up testimonials.</p>
-    </div>
-
-    <div class="review-grid">
-      <div class="review"><div class="stars">★★★★★</div><p>“Add your first genuine customer review here after completing a successful job.”</p><div class="review-user"><div class="review-avatar">R</div><div><strong>Real customer</strong><small>Google review</small></div></div></div>
-      <div class="review"><div class="stars">★★★★★</div><p>“Add a genuine review describing the actual service and customer experience.”</p><div class="review-user"><div class="review-avatar">A</div><div><strong>Real customer</strong><small>Google review</small></div></div></div>
-      <div class="review"><div class="stars">★★★★★</div><p>“Once you have reviews, this section becomes one of your strongest trust signals.”</p><div class="review-user"><div class="review-avatar">M</div><div><strong>Real customer</strong><small>Google review</small></div></div></div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="areas">
-  <div class="container two-col">
-    <div>
-      <div class="eyebrow">Service Areas</div>
-      <h2 class="section-title">Home service across Gujranwala.</h2>
-      <p class="section-lead">We are building AI Home Care around convenient local coverage. Availability can vary by technician and service.</p>
-      <div class="area-box">
-        <span class="area">Gujranwala</span>
-        <span class="area">Wapda Town</span>
-        <span class="area">DC Colony</span>
-        <span class="area">Model Town</span>
-        <span class="area">Satellite Town</span>
-        <span class="area">Citi Housing</span>
-        <span class="area">Rahwali</span>
-        <span class="area">Gujranwala Cantt</span>
-      </div>
-      <div style="margin-top:25px">
-        <a class="btn btn-primary" href="https://wa.me/923054226888?text=Main%20Gujranwala%20mein%20home%20service%20book%20karna%20chahta%20hoon.">Check Availability on WhatsApp</a>
-      </div>
-    </div>
-
-    <div id="faq">
-      <div class="eyebrow">FAQ</div>
-      <h2 class="section-title">Common questions.</h2>
-      <div class="faq" style="margin-top:24px">
-        <details open><summary>How do I book a technician?</summary><p>WhatsApp or call 0305 4226888. Tell us the problem and your location, and we will guide you through the booking.</p></details>
-        <details><summary>Do you provide home visits?</summary><p>Yes. AI Home Care is designed around home visits for the services and areas currently covered by our technicians.</p></details>
-        <details><summary>Can I send a photo or video?</summary><p>Yes. Sending a photo or short video on WhatsApp can help us understand the issue before the visit.</p></details>
-        <details><summary>Will repair work start immediately?</summary><p>The technician should first diagnose the issue and explain the required work/estimate. Repair proceeds after customer approval.</p></details>
-        <details><summary>Do you provide warranty?</summary><p>Where applicable, warranty/support terms are communicated for the completed service. Ask for the specific warranty terms before approving the repair.</p></details>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="cta">
-  <div class="container">
-    <div class="cta-box">
-      <div>
-        <h2>Ghar ka masla hai?<br>AI Home Care ko call karein.</h2>
-        <p>One call for AC, appliances, electrical, plumbing and home maintenance.</p>
-      </div>
-      <div class="cta-actions">
-        <a class="btn btn-white" href="tel:+923054226888">📞 Call 0305 4226888</a>
-        <a class="btn btn-primary" href="https://wa.me/923054226888?text=Assalam-o-Alaikum%2C%20AI%20Home%20Care%20se%20service%20book%20karni%20hai.">WhatsApp Now</a>
-      </div>
-    </div>
-  </div>
-</section>
-
+<section class="contact" id="contact"><div class="container contact-grid">
+<div>
+<div class="eyebrow">Contact us</div><h2 style="font-size:42px;line-height:1.15;color:var(--navy)">Tell us how we can help.</h2>
+<p class="lead" style="font-size:16px;margin-top:15px">Send your details and we'll use WhatsApp to make the enquiry easy to follow up.</p>
+<div class="contact-info">
+<div class="info"><span>📍</span><div><b>Location</b><span>Gujranwala, Punjab, Pakistan</span></div></div>
+<div class="info"><span>📞</span><div><b>Phone / WhatsApp</b><span>+92 300 1234567</span></div></div>
+<div class="info"><span>✉️</span><div><b>Email</b><span>hello@aihomecare.example</span></div></div>
+</div>
+</div>
+<div class="contact-card">
+<form onsubmit="sendWhatsApp(event)">
+<label for="name">Your name</label><input id="name" required placeholder="Enter your name">
+<label for="phone">Phone number</label><input id="phone" required placeholder="03xx xxxxxxx">
+<label for="message">How can we help?</label><textarea id="message" required placeholder="Tell us briefly about the care/support you need"></textarea>
+<button class="btn btn-primary" type="submit">Send via WhatsApp →</button>
+</form>
+<p style="font-size:11px;color:var(--muted);margin-top:12px">Demo contact number is included. Replace it with your real business WhatsApp number before publishing.</p>
+</div>
+</div></section>
 </main>
 
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <a class="logo" href="#top">
-          <span class="logo-mark">
-            <svg viewBox="0 0 32 32" fill="none">
-              <path d="M4 15.5 16 5l12 10.5V28H4V15.5Z" stroke="white" stroke-width="2.4" stroke-linejoin="round"/>
-              <path d="M12 28V18h8v10M9 14h14" stroke="#54e2c1" stroke-width="2.4" stroke-linecap="round"/>
-            </svg>
-          </span>
-          AI Home Care
-        </a>
-        <p>Ghar ki har repair, ek call par. Professional home repair and maintenance services in Gujranwala.</p>
-      </div>
-      <div><h4>Services</h4><a href="#services">AC Repair</a><a href="#services">Refrigerator</a><a href="#services">Washing Machine</a><a href="#services">Electrical</a><a href="#services">Plumbing</a></div>
-      <div><h4>Company</h4><a href="#why-us">Why Us</a><a href="#work">Our Work</a><a href="#areas">Service Areas</a><a href="#faq">FAQ</a></div>
-      <div><h4>Contact</h4><a href="tel:+923054226888">0305 4226888</a><a href="https://wa.me/923054226888">WhatsApp</a><a href="#areas">Gujranwala, Pakistan</a></div>
-    </div>
-    <div class="footer-bottom"><span>© 2026 AI Home Care. All rights reserved.</span><span>Ghar ki har repair, ek call par.</span></div>
-  </div>
-</footer>
+<footer><div class="container">
+<div class="footer-grid"><div class="footer-brand"><h3>AI Home Care</h3><p>Professional, compassionate home-care support for families in Gujranwala.</p></div>
+<div class="footer-links"><a href="#home">Home</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a></div></div>
+<div class="copy">© 2026 AI Home Care. All rights reserved.</div>
+</div></footer>
 
-<a class="floating" href="https://wa.me/923054226888?text=Assalam-o-Alaikum%2C%20mujhe%20AI%20Home%20Care%20se%20service%20chahiye." aria-label="WhatsApp AI Home Care">
-  <svg width="29" height="29" viewBox="0 0 32 32" fill="none">
-    <path d="M16 4.5a11.5 11.5 0 0 0-9.9 17.35L4.6 27.5l5.8-1.47A11.5 11.5 0 1 0 16 4.5Z" stroke="white" stroke-width="2"/>
-    <path d="M12.1 11.1c.3-.7.7-.7 1.2-.7h.7c.3 0 .5.1.7.6l.8 1.9c.1.3.1.5-.1.8l-.7.9c.8 1.4 1.9 2.4 3.4 3.1l.8-.9c.2-.3.5-.4.8-.2l1.8.8c.4.2.5.4.5.8 0 1.2-.9 2.1-2 2.1-1.3 0-3.6-.9-5.5-2.7-1.7-1.6-2.8-3.6-2.8-5 0-.5.1-1 .4-1.5Z" fill="white"/>
-  </svg>
-</a>
-
-<div class="mobile-bar">
-  <a class="btn btn-dark" href="tel:+923054226888">📞 Call Now</a>
-  <a class="btn btn-primary" href="https://wa.me/923054226888?text=Assalam-o-Alaikum%2C%20AI%20Home%20Care%20se%20service%20book%20karni%20hai.">WhatsApp</a>
-</div>
+<a class="whatsapp" href="https://wa.me/923001234567" target="_blank" aria-label="WhatsApp">◔</a>
 
 <script>
-const nav = document.getElementById("nav");
-const menuBtn = document.getElementById("menuBtn");
-
-menuBtn.addEventListener("click", () => {
-  nav.classList.toggle("mobile-open");
-});
-
-document.querySelectorAll(".nav-links a").forEach(link => {
-  link.addEventListener("click", () => nav.classList.remove("mobile-open"));
-});
-
-// Prevent accidental empty form behavior if future forms are added.
-document.querySelectorAll("a[href^='#']").forEach(a => {
-  a.addEventListener("click", () => {
-    const target = document.querySelector(a.getAttribute("href"));
-    if(target) target.scrollIntoView({behavior:"smooth"});
-  });
-});
+function toggleMenu(){document.getElementById('navlinks').classList.toggle('open')}
+document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navlinks').classList.remove('open')));
+function sendWhatsApp(e){
+  e.preventDefault();
+  const name=document.getElementById('name').value.trim();
+  const phone=document.getElementById('phone').value.trim();
+  const msg=document.getElementById('message').value.trim();
+  const text=`Hello AI Home Care,%0A%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0AEnquiry: ${encodeURIComponent(msg)}`;
+  window.open('https://wa.me/923001234567?text='+text,'_blank');
+}
 </script>
-
 </body>
 </html>
