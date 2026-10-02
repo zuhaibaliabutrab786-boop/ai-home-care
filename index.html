@@ -1,245 +1,92 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="AI Home Care Gujranwala - trusted professional home care and support services.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="AI Home Care Gujranwala — compassionate, reliable home care and support for families.">
 <title>AI Home Care | Gujranwala</title>
 <style>
-:root{
-  --navy:#12304a;--blue:#1d6fa5;--sky:#eaf6fb;--teal:#35a6a0;
-  --text:#263746;--muted:#667786;--white:#fff;--line:#e5edf2;
-  --shadow:0 18px 50px rgba(18,48,74,.10);--radius:22px;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--text);line-height:1.6;background:#fff}
-a{text-decoration:none;color:inherit}
-.container{width:min(1120px,92%);margin:auto}
-.top{background:var(--navy);color:#fff;font-size:13px;padding:9px 0}
-.top .container{display:flex;justify-content:space-between;gap:15px}
-nav{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--line)}
-.nav{height:76px;display:flex;align-items:center;justify-content:space-between}
-.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;color:var(--navy)}
-.logo-mark{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--teal),var(--blue));display:grid;place-items:center;color:white;font-size:20px}
-.navlinks{display:flex;align-items:center;gap:28px;font-weight:600;font-size:14px}
-.navlinks a:hover{color:var(--blue)}
-.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:12px;padding:13px 20px;font-weight:750;cursor:pointer;transition:.2s}
-.btn-primary{background:var(--blue);color:#fff;box-shadow:0 10px 25px rgba(29,111,165,.22)}
-.btn-primary:hover{transform:translateY(-2px)}
-.btn-light{background:#fff;color:var(--navy);border:1px solid var(--line)}
-.menu{display:none;background:none;border:0;font-size:28px;color:var(--navy)}
-.hero{background:linear-gradient(135deg,#f4fbfd 0%,#e9f5fa 55%,#f8fcfd 100%);padding:82px 0 65px;overflow:hidden}
-.hero-grid{display:grid;grid-template-columns:1.03fr .97fr;align-items:center;gap:55px}
-.eyebrow{color:var(--teal);font-weight:800;text-transform:uppercase;letter-spacing:1.6px;font-size:12px;margin-bottom:15px}
-h1{font-size:clamp(40px,5vw,66px);line-height:1.04;color:var(--navy);letter-spacing:-2px;margin-bottom:22px}
-.lead{font-size:18px;color:var(--muted);max-width:620px;margin-bottom:28px}
-.actions{display:flex;gap:12px;flex-wrap:wrap}
-.hero-art{position:relative;min-height:400px}
-.blob{position:absolute;inset:20px 0 0 20px;background:#d6edf3;border-radius:47% 53% 57% 43% / 43% 45% 55% 57%;transform:rotate(-8deg)}
-.art-card{position:absolute;inset:45px 25px 30px 45px;background:#fff;border-radius:30px;box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center;overflow:hidden}
-.art-card svg{width:90%;height:90%}
-.float{position:absolute;background:#fff;border-radius:16px;padding:12px 16px;box-shadow:var(--shadow);font-weight:750;color:var(--navy);font-size:13px}
-.float.one{left:0;top:80px}.float.two{right:0;bottom:55px}
-.stats{background:#fff;border-bottom:1px solid var(--line)}
-.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);padding:27px 0}
-.stat{text-align:center;border-right:1px solid var(--line)}
-.stat:last-child{border:0}.stat strong{display:block;font-size:29px;color:var(--navy)}.stat span{font-size:13px;color:var(--muted)}
-section{padding:88px 0}
-.section-head{text-align:center;max-width:720px;margin:0 auto 48px}
-.section-head h2{font-size:38px;line-height:1.15;color:var(--navy);margin-bottom:13px}
-.section-head p{color:var(--muted)}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.step,.service,.why-card,.testimonial,.faq-item{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 10px 35px rgba(18,48,74,.05)}
-.step{padding:27px}.num{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--sky);color:var(--blue);font-weight:800;margin-bottom:20px}.step h3,.service h3{color:var(--navy);margin-bottom:8px}.step p,.service p{font-size:14px;color:var(--muted)}
-.services{background:#f7fbfc}
-.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.service{padding:28px;transition:.2s}.service:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
-.icon{width:52px;height:52px;border-radius:15px;background:var(--sky);display:grid;place-items:center;font-size:25px;margin-bottom:18px}
-.why-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:55px;align-items:center}
-.why-art{background:linear-gradient(145deg,#e8f6f8,#f7fcfd);border-radius:32px;min-height:390px;display:grid;place-items:center}
-.why-art svg{width:82%;height:82%}
-.why-list{display:grid;gap:16px;margin-top:25px}.why-card{padding:18px;display:flex;gap:15px;box-shadow:none}
-.check{width:32px;height:32px;flex:0 0 32px;border-radius:50%;background:#e4f6f0;color:#218d78;display:grid;place-items:center;font-weight:900}
-.testimonials{background:#f7fbfc}
-.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.testimonial{padding:27px}.stars{color:#e3a52c;letter-spacing:2px;margin-bottom:14px}.testimonial p{color:var(--muted);font-size:14px;margin-bottom:18px}.person{font-weight:800;color:var(--navy);font-size:14px}
-.cta{padding:75px 0}.cta-box{background:linear-gradient(135deg,var(--navy),#1e617e);border-radius:30px;padding:55px;display:flex;align-items:center;justify-content:space-between;gap:30px;color:#fff}.cta-box h2{font-size:38px;line-height:1.15;margin-bottom:10px}.cta-box p{color:#d8e9ef}
-.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.faq-item{padding:22px}.faq-item h3{font-size:16px;color:var(--navy);margin-bottom:7px}.faq-item p{font-size:14px;color:var(--muted)}
-.contact{background:#f7fbfc}.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:35px}.contact-card{background:#fff;border:1px solid var(--line);border-radius:25px;padding:30px;box-shadow:var(--shadow)}.contact-info{display:grid;gap:18px;margin-top:25px}.info{display:flex;gap:13px}.info b{display:block;color:var(--navy)}.info span{font-size:14px;color:var(--muted)}
-form{display:grid;gap:14px}label{font-size:13px;font-weight:700;color:var(--navy)}input,textarea{width:100%;border:1px solid #dce7ed;border-radius:12px;padding:13px;font:inherit;outline:0}input:focus,textarea:focus{border-color:var(--blue)}textarea{min-height:120px;resize:vertical}
-footer{background:var(--navy);color:#d9e7ed;padding:45px 0 25px}.footer-grid{display:flex;justify-content:space-between;gap:30px}.footer-brand{max-width:450px}.footer-brand h3{color:#fff;margin-bottom:10px}.footer-links{display:flex;gap:20px;font-size:14px}.copy{border-top:1px solid rgba(255,255,255,.13);margin-top:30px;padding-top:18px;font-size:12px;text-align:center}
-.whatsapp{position:fixed;right:20px;bottom:20px;z-index:30;width:58px;height:58px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;font-size:27px;box-shadow:0 12px 28px rgba(0,0,0,.2)}
-@media(max-width:850px){
- .navlinks{display:none;position:absolute;top:76px;left:0;right:0;background:#fff;padding:20px;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}
- .navlinks.open{display:flex}.menu{display:block}
- .hero-grid,.why-grid,.contact-grid{grid-template-columns:1fr}.hero{padding-top:55px}.hero-art{min-height:350px}
- .steps{grid-template-columns:1fr 1fr}.service-grid,.test-grid{grid-template-columns:1fr 1fr}
- .cta-box{flex-direction:column;align-items:flex-start}.faq-grid{grid-template-columns:1fr}
-}
-@media(max-width:560px){
- .top .container{flex-direction:column;text-align:center;gap:3px}.nav{height:68px}.navlinks{top:68px}
- .hero-art{min-height:290px}.float{display:none}.art-card{inset:25px 10px}.stats-grid{grid-template-columns:1fr}.stat{border-right:0;border-bottom:1px solid var(--line);padding:12px}.stat:last-child{border-bottom:0}
- section{padding:65px 0}.section-head h2{font-size:30px}.steps,.service-grid,.test-grid{grid-template-columns:1fr}
- .cta-box{padding:35px 25px}.cta-box h2{font-size:30px}.footer-grid{flex-direction:column}.footer-links{flex-wrap:wrap}
-}
+:root{--ink:#123047;--blue:#1677a8;--mint:#36b39d;--pale:#eff9f8;--cream:#fbfaf6;--muted:#667886;--line:#dfe9ed;--white:#fff;--shadow:0 22px 65px rgba(18,48,71,.12)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Arial,Helvetica,sans-serif;color:var(--ink);background:#fff;line-height:1.55}a{text-decoration:none;color:inherit}.wrap{width:min(1160px,92%);margin:auto}
+.top{background:var(--ink);color:#fff;font-size:12px}.top .wrap{display:flex;justify-content:space-between;padding:9px 0}
+.header{height:82px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;position:sticky;top:0;z-index:50}.nav{display:flex;align-items:center;justify-content:space-between}.brand{display:flex;gap:11px;align-items:center;font-weight:900;font-size:21px}.brandmark{width:43px;height:43px;border-radius:14px;background:linear-gradient(145deg,var(--mint),var(--blue));display:grid;place-items:center;color:#fff;font-size:21px;box-shadow:0 9px 20px #1677a833}.links{display:flex;align-items:center;gap:29px;font-size:14px;font-weight:750}.links a:hover{color:var(--blue)}.pill{background:var(--blue);color:#fff;padding:12px 18px;border-radius:10px}.hamb{display:none;border:0;background:none;font-size:28px;color:var(--ink)}
+.hero{background:var(--cream);padding:72px 0 84px}.heroGrid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}.kicker{text-transform:uppercase;letter-spacing:2px;color:var(--mint);font-size:12px;font-weight:900;margin-bottom:16px}.hero h1{font-size:clamp(44px,5.4vw,72px);line-height:1.02;letter-spacing:-3px;margin:0 0 22px;max-width:680px}.hero p{font-size:18px;color:var(--muted);max-width:610px;margin:0 0 30px}.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:11px;padding:14px 21px;font-weight:850;border:1px solid transparent}.primary{background:var(--blue);color:#fff;box-shadow:0 13px 28px #1677a82c}.outline{border-color:#cbdbe1;background:#fff}.heroVisual{position:relative}.heroPhoto{height:510px;border-radius:34px 34px 34px 90px;overflow:hidden;box-shadow:var(--shadow);background:#dbecee}.heroPhoto img{width:100%;height:100%;object-fit:cover;display:block}.badge{position:absolute;background:#fff;border-radius:18px;padding:15px 18px;box-shadow:var(--shadow);font-weight:800}.badge small{display:block;color:var(--muted);font-weight:600;font-size:11px}.b1{left:-27px;top:55px}.b2{right:-20px;bottom:45px}.trust{background:#fff;border-bottom:1px solid var(--line)}.trustGrid{display:grid;grid-template-columns:repeat(3,1fr)}.trustItem{text-align:center;padding:26px;border-right:1px solid var(--line)}.trustItem:last-child{border:0}.trustItem b{font-size:28px;display:block}.trustItem span{font-size:12px;color:var(--muted)}
+section{padding:95px 0}.head{text-align:center;max-width:720px;margin:0 auto 50px}.head .kicker{margin-bottom:11px}.head h2{font-size:42px;line-height:1.1;letter-spacing:-1.3px;margin:0 0 13px}.head p{color:var(--muted);margin:0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{border:1px solid var(--line);border-radius:22px;padding:28px;background:#fff;transition:.25s}.card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}.ico{width:52px;height:52px;border-radius:15px;background:var(--pale);display:grid;place-items:center;font-size:25px;margin-bottom:20px}.card h3{font-size:19px;margin:0 0 7px}.card p{font-size:14px;color:var(--muted);margin:0}.services{background:#f7fbfb}
+.story{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.storyPhoto{height:500px;border-radius:34px;overflow:hidden;box-shadow:var(--shadow)}.storyPhoto img{width:100%;height:100%;object-fit:cover}.story h2{font-size:43px;line-height:1.1;letter-spacing:-1.4px;margin:0 0 17px}.storyText{color:var(--muted);font-size:16px}.checks{display:grid;gap:15px;margin:28px 0}.check{display:flex;gap:12px;align-items:flex-start}.check i{font-style:normal;width:28px;height:28px;min-width:28px;border-radius:50%;background:#e1f5ef;color:#208b76;display:grid;place-items:center;font-weight:900}.check b{display:block;margin-bottom:2px}.check span{font-size:13px;color:var(--muted)}
+.band{background:var(--ink);color:#fff}.bandGrid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}.band h2{font-size:42px;line-height:1.1;margin:0 0 15px}.band p{color:#cfe0e7}.numbers{display:grid;grid-template-columns:1fr 1fr;gap:14px}.number{padding:23px;border:1px solid #ffffff22;border-radius:18px;background:#ffffff0c}.number b{font-size:31px;display:block}.number span{font-size:12px;color:#bdd0d8}
+.reviews{background:#f7fbfb}.reviewGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.review{background:#fff;border:1px solid var(--line);border-radius:22px;padding:27px}.stars{letter-spacing:3px;color:#e7a62c;margin-bottom:13px}.review p{font-size:14px;color:var(--muted);min-height:90px}.review b{font-size:13px}
+.cta{padding:70px 0}.ctaBox{border-radius:30px;background:linear-gradient(125deg,#e8f7f5,#e9f4fb);padding:55px;display:flex;align-items:center;justify-content:space-between;gap:25px}.ctaBox h2{font-size:40px;line-height:1.1;margin:0 0 9px}.ctaBox p{color:var(--muted);margin:0}
+.faqGrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.faq{border:1px solid var(--line);border-radius:17px;padding:22px}.faq b{display:block;margin-bottom:6px}.faq span{color:var(--muted);font-size:13px}
+.contact{background:var(--cream)}.contactGrid{display:grid;grid-template-columns:.8fr 1.2fr;gap:45px}.contact h2{font-size:43px;line-height:1.1;margin:0 0 15px}.contactLead{color:var(--muted)}.contactInfo{margin-top:30px;display:grid;gap:16px}.info{display:flex;gap:13px}.infoIcon{width:40px;height:40px;border-radius:12px;background:#fff;display:grid;place-items:center}.info b{display:block}.info span{font-size:13px;color:var(--muted)}.form{background:#fff;border:1px solid var(--line);padding:31px;border-radius:24px;box-shadow:var(--shadow);display:grid;gap:13px}.form label{font-size:12px;font-weight:800}.form input,.form textarea{width:100%;border:1px solid #d8e4e9;border-radius:11px;padding:13px;font:inherit;outline:0}.form input:focus,.form textarea:focus{border-color:var(--blue)}.form textarea{min-height:125px;resize:vertical}.note{font-size:10px;color:var(--muted)}
+footer{background:#0d2638;color:#cbdce3;padding:48px 0 23px}.foot{display:flex;justify-content:space-between;gap:25px}.foot h3{color:#fff;margin:0 0 8px}.foot p{font-size:13px;max-width:470px;margin:0}.footlinks{display:flex;gap:22px;font-size:13px}.copy{border-top:1px solid #ffffff18;margin-top:30px;padding-top:18px;text-align:center;font-size:11px}
+.whats{position:fixed;right:20px;bottom:20px;width:59px;height:59px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;font-size:26px;z-index:60;box-shadow:0 14px 30px #0003}
+@media(max-width:850px){.links{display:none;position:absolute;left:0;right:0;top:82px;background:#fff;padding:20px;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}.links.open{display:flex}.hamb{display:block}.heroGrid,.story,.bandGrid,.contactGrid{grid-template-columns:1fr}.hero{padding:55px 0 70px}.heroVisual{max-width:680px;margin:auto}.cards,.reviewGrid{grid-template-columns:1fr 1fr}.storyPhoto{height:430px}.ctaBox{flex-direction:column;align-items:flex-start}.faqGrid{grid-template-columns:1fr}}
+@media(max-width:560px){.top .wrap{flex-direction:column;text-align:center;gap:2px}.header{height:70px}.links{top:70px}.hero h1{font-size:44px;letter-spacing:-2px}.heroPhoto{height:390px;border-radius:25px}.b1{left:10px;top:20px}.b2{right:10px;bottom:20px}.trustGrid{grid-template-columns:1fr}.trustItem{border-right:0;border-bottom:1px solid var(--line)}.trustItem:last-child{border-bottom:0}.cards,.reviewGrid{grid-template-columns:1fr}.story h2,.band h2,.ctaBox h2,.contact h2,.head h2{font-size:32px}.storyPhoto{height:360px}.numbers{grid-template-columns:1fr}.ctaBox{padding:32px 25px}.foot{flex-direction:column}.footlinks{flex-wrap:wrap}}
 </style>
 </head>
 <body>
+<div class="top"><div class="wrap"><span>AI Home Care • Gujranwala</span><span>Compassionate support for everyday life</span></div></div>
+<header class="header"><div class="wrap nav">
+<a class="brand" href="#home"><span class="brandmark">♥</span>AI Home Care</a>
+<button class="hamb" onclick="document.getElementById('links').classList.toggle('open')">☰</button>
+<nav class="links" id="links"><a href="#home">Home</a><a href="#services">Services</a><a href="#about">About</a><a href="#reviews">Families</a><a href="#faq">FAQ</a><a class="pill" href="#contact">Get in touch</a></nav>
+</div></header>
 
-<div class="top"><div class="container"><span>Professional home care & support in Gujranwala</span><span>Available for enquiries • Mon–Sat</span></div></div>
-
-<nav>
-  <div class="container nav">
-    <a class="logo" href="#home"><span class="logo-mark">♥</span>AI Home Care</a>
-    <button class="menu" onclick="toggleMenu()" aria-label="Open menu">☰</button>
-    <div class="navlinks" id="navlinks">
-      <a href="#home">Home</a><a href="#services">Services</a><a href="#about">About</a>
-      <a href="#faq">FAQ</a><a href="#contact" class="btn btn-primary">Contact Us</a>
-    </div>
-  </div>
-</nav>
-
-<main>
-<section class="hero" id="home">
-<div class="container hero-grid">
-  <div>
-    <div class="eyebrow">Compassionate care • Gujranwala</div>
-    <h1>Trusted home care for the people who matter most.</h1>
-    <p class="lead">Reliable, respectful and compassionate support designed around the comfort, dignity and everyday needs of your loved ones.</p>
-    <div class="actions"><a class="btn btn-primary" href="#contact">Request a Callback</a><a class="btn btn-light" href="#services">Explore Services</a></div>
-  </div>
-  <div class="hero-art">
-    <div class="blob"></div>
-    <div class="art-card">
-      <svg viewBox="0 0 500 390" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="250" cy="180" r="125" fill="#eaf6fb"/>
-        <path d="M135 315c18-75 61-105 115-105s97 30 115 105" fill="#1d6fa5"/>
-        <circle cx="250" cy="125" r="55" fill="#f3c7a9"/>
-        <path d="M196 117c5-58 104-65 111 7-22-21-52-28-111-7z" fill="#4a3b3a"/>
-        <path d="M160 295c22-43 52-65 90-65s68 22 90 65" fill="#35a6a0"/>
-        <path d="M187 182c17 23 42 34 63 34s46-11 63-34" fill="none" stroke="#d89d83" stroke-width="7" stroke-linecap="round"/>
-        <circle cx="230" cy="125" r="5" fill="#263746"/><circle cx="270" cy="125" r="5" fill="#263746"/>
-        <path d="M242 146q8 7 16 0" fill="none" stroke="#263746" stroke-width="4" stroke-linecap="round"/>
-        <path d="M105 320h290" stroke="#b9dce5" stroke-width="8" stroke-linecap="round"/>
-      </svg>
-    </div>
-    <div class="float one">✓ Caring & respectful</div><div class="float two">★ Family-focused</div>
-  </div>
-</div>
-</section>
-
-<div class="stats"><div class="container stats-grid">
-  <div class="stat"><strong>24/7</strong><span>Support-focused approach</span></div>
-  <div class="stat"><strong>6+</strong><span>Core care services</span></div>
-  <div class="stat"><strong>100%</strong><span>Personalized care plans</span></div>
-</div></div>
-
-<section id="about"><div class="container">
-<div class="section-head"><div class="eyebrow">How we work</div><h2>Simple care, thoughtfully delivered.</h2><p>We make getting the right support straightforward, transparent and centered around each family's needs.</p></div>
-<div class="steps">
-<div class="step"><div class="num">01</div><h3>Talk to us</h3><p>Tell us about your loved one's needs, routine and preferences.</p></div>
-<div class="step"><div class="num">02</div><h3>Understand needs</h3><p>We discuss the right level of support and practical requirements.</p></div>
-<div class="step"><div class="num">03</div><h3>Create a plan</h3><p>A clear care approach is shaped around comfort, dignity and routine.</p></div>
-<div class="step"><div class="num">04</div><h3>Start support</h3><p>Our goal is to provide dependable care with ongoing communication.</p></div>
-</div></div></section>
-
-<section class="services" id="services"><div class="container">
-<div class="section-head"><div class="eyebrow">Our services</div><h2>Support that fits everyday life.</h2><p>Flexible home-care support for individuals and families in Gujranwala.</p></div>
-<div class="service-grid">
-<div class="service"><div class="icon">🏠</div><h3>Home Support</h3><p>Practical help with everyday household routines and personal comfort.</p></div>
-<div class="service"><div class="icon">🤝</div><h3>Companionship</h3><p>Friendly social support that helps reduce isolation and encourages connection.</p></div>
-<div class="service"><div class="icon">🧓</div><h3>Senior Care</h3><p>Respectful assistance for older adults with routines and daily activities.</p></div>
-<div class="service"><div class="icon">💊</div><h3>Medication Support</h3><p>Routine reminders and support around an individual's established medication plan.</p></div>
-<div class="service"><div class="icon">🚗</div><h3>Appointments & Errands</h3><p>Support with essential errands and getting to important appointments.</p></div>
-<div class="service"><div class="icon">❤️</div><h3>Personalized Care</h3><p>Care arrangements can be tailored to individual preferences and circumstances.</p></div>
-</div></div></section>
-
-<section><div class="container why-grid">
-<div class="why-art">
-<svg viewBox="0 0 420 360" xmlns="http://www.w3.org/2000/svg">
-<rect x="55" y="55" width="310" height="245" rx="35" fill="#fff"/>
-<circle cx="210" cy="145" r="62" fill="#eaf6fb"/>
-<path d="M150 292c10-67 34-94 60-94s50 27 60 94" fill="#35a6a0"/>
-<circle cx="210" cy="130" r="34" fill="#f3c7a9"/>
-<path d="M177 127c5-39 62-48 68 4-21-15-43-18-68-4z" fill="#4a3b3a"/>
-<path d="M198 151q12 9 24 0" fill="none" stroke="#a36f63" stroke-width="4" stroke-linecap="round"/>
-<circle cx="198" cy="132" r="3.5" fill="#263746"/><circle cx="222" cy="132" r="3.5" fill="#263746"/>
-<path d="M85 270h250" stroke="#d4e9ee" stroke-width="7" stroke-linecap="round"/>
-</svg>
-</div>
-<div>
-<div class="eyebrow">Why AI Home Care</div><h2 style="font-size:40px;color:var(--navy);line-height:1.15">Care built around people, not just tasks.</h2>
-<p class="lead" style="font-size:16px;margin-top:15px">Our approach focuses on respectful communication, consistency and practical support that makes home life easier.</p>
-<div class="why-list">
-<div class="why-card"><div class="check">✓</div><div><b>Respect & dignity</b><p>We treat every person with patience and respect.</p></div></div>
-<div class="why-card"><div class="check">✓</div><div><b>Personalized approach</b><p>Support can be shaped around individual routines and preferences.</p></div></div>
-<div class="why-card"><div class="check">✓</div><div><b>Clear communication</b><p>Families can stay informed and involved in the care journey.</p></div></div>
-</div></div></div></section>
-
-<section class="testimonials"><div class="container">
-<div class="section-head"><div class="eyebrow">Family feedback</div><h2>What families value about caring support.</h2></div>
-<div class="test-grid">
-<div class="testimonial"><div class="stars">★★★★★</div><p>“The team was kind, patient and easy to communicate with. It made our family's routine much more manageable.”</p><div class="person">— Family member</div></div>
-<div class="testimonial"><div class="stars">★★★★★</div><p>“We appreciated the respectful approach and the attention given to everyday needs.”</p><div class="person">— Client family</div></div>
-<div class="testimonial"><div class="stars">★★★★★</div><p>“Having dependable support at home gave us greater peace of mind.”</p><div class="person">— Family member</div></div>
-</div></div></section>
-
-<section class="cta"><div class="container"><div class="cta-box">
-<div><h2>Let's talk about the care you need.</h2><p>Contact AI Home Care to discuss your requirements in Gujranwala.</p></div>
-<a class="btn btn-light" href="#contact">Get in Touch →</a>
-</div></div></section>
-
-<section id="faq"><div class="container">
-<div class="section-head"><div class="eyebrow">FAQ</div><h2>Common questions.</h2></div>
-<div class="faq-grid">
-<div class="faq-item"><h3>Where do you provide care?</h3><p>AI Home Care is presented for families seeking home-care support in Gujranwala and surrounding areas.</p></div>
-<div class="faq-item"><h3>Can care be personalized?</h3><p>Yes. Support can be discussed around the individual's routine, preferences and practical needs.</p></div>
-<div class="faq-item"><h3>How do I request a callback?</h3><p>Use the contact form below. It will open WhatsApp with your enquiry ready to send.</p></div>
-<div class="faq-item"><h3>How quickly can I get a response?</h3><p>Response times depend on enquiry volume and availability. We aim to respond as soon as practical.</p></div>
-</div></div></section>
-
-<section class="contact" id="contact"><div class="container contact-grid">
-<div>
-<div class="eyebrow">Contact us</div><h2 style="font-size:42px;line-height:1.15;color:var(--navy)">Tell us how we can help.</h2>
-<p class="lead" style="font-size:16px;margin-top:15px">Send your details and we'll use WhatsApp to make the enquiry easy to follow up.</p>
-<div class="contact-info">
-<div class="info"><span>📍</span><div><b>Location</b><span>Gujranwala, Punjab, Pakistan</span></div></div>
-<div class="info"><span>📞</span><div><b>Phone / WhatsApp</b><span>+92 300 1234567</span></div></div>
-<div class="info"><span>✉️</span><div><b>Email</b><span>hello@aihomecare.example</span></div></div>
-</div>
-</div>
-<div class="contact-card">
-<form onsubmit="sendWhatsApp(event)">
-<label for="name">Your name</label><input id="name" required placeholder="Enter your name">
-<label for="phone">Phone number</label><input id="phone" required placeholder="03xx xxxxxxx">
-<label for="message">How can we help?</label><textarea id="message" required placeholder="Tell us briefly about the care/support you need"></textarea>
-<button class="btn btn-primary" type="submit">Send via WhatsApp →</button>
-</form>
-<p style="font-size:11px;color:var(--muted);margin-top:12px">Demo contact number is included. Replace it with your real business WhatsApp number before publishing.</p>
-</div>
+<section class="hero" id="home"><div class="wrap heroGrid">
+<div><div class="kicker">Home care • Gujranwala</div><h1>Care that feels personal, right at home.</h1><p>Professional, respectful support for older adults, families and individuals who want dependable care without leaving the comfort of home.</p><div class="actions"><a class="btn primary" href="#contact">Talk to our team →</a><a class="btn outline" href="#services">View services</a></div></div>
+<div class="heroVisual"><div class="heroPhoto"><img src="https://images.unsplash.com/photo-1758686254457-6aaca1ca78e0?auto=format&fit=crop&fm=jpg&q=85&w=1200" alt="Older couple enjoying support and connection at home" loading="eager"></div><div class="badge b1">✓ Family-focused<small>Respectful everyday support</small></div><div class="badge b2">★★★★★<small>Compassionate approach</small></div></div>
 </div></section>
-</main>
 
-<footer><div class="container">
-<div class="footer-grid"><div class="footer-brand"><h3>AI Home Care</h3><p>Professional, compassionate home-care support for families in Gujranwala.</p></div>
-<div class="footer-links"><a href="#home">Home</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a></div></div>
-<div class="copy">© 2026 AI Home Care. All rights reserved.</div>
-</div></footer>
+<div class="trust"><div class="wrap trustGrid"><div class="trustItem"><b>Personal</b><span>Care shaped around individual routines</span></div><div class="trustItem"><b>Reliable</b><span>Clear communication with families</span></div><div class="trustItem"><b>Local</b><span>Focused on Gujranwala and nearby families</span></div></div></div>
 
-<a class="whatsapp" href="https://wa.me/923001234567" target="_blank" aria-label="WhatsApp">◔</a>
+<section id="services" class="services"><div class="wrap"><div class="head"><div class="kicker">What we can help with</div><h2>Practical care, delivered with kindness.</h2><p>Choose the type of support that best matches your family's needs.</p></div>
+<div class="cards">
+<div class="card"><div class="ico">🏡</div><h3>Home Support</h3><p>Helpful support with everyday routines, comfort and household needs.</p></div>
+<div class="card"><div class="ico">🤝</div><h3>Companionship</h3><p>Friendly company, conversation and meaningful social connection at home.</p></div>
+<div class="card"><div class="ico">🧓</div><h3>Senior Care</h3><p>Respectful assistance for older adults with day-to-day activities.</p></div>
+<div class="card"><div class="ico">💊</div><h3>Medication Reminders</h3><p>Support with established medication routines and reminders.</p></div>
+<div class="card"><div class="ico">🚗</div><h3>Appointments & Errands</h3><p>Practical help getting to important appointments and completing essential errands.</p></div>
+<div class="card"><div class="ico">❤️</div><h3>Personalized Support</h3><p>A flexible approach based on preferences, routine and family requirements.</p></div>
+</div></div></section>
 
+<section id="about"><div class="wrap story">
+<div class="storyPhoto"><img src="https://images.unsplash.com/photo-1763631045896-04d2e60048ae?auto=format&fit=crop&fm=jpg&q=85&w=1200" alt="Multi-generational family enjoying time together" loading="lazy"></div>
+<div><div class="kicker">Why families choose a home-care approach</div><h2>Because good care is about more than a checklist.</h2><p class="storyText">The right support should protect dignity, encourage independence and make families feel more connected and confident about everyday care.</p>
+<div class="checks">
+<div class="check"><i>✓</i><div><b>Respect first</b><span>Every person deserves patience, privacy and dignity.</span></div></div>
+<div class="check"><i>✓</i><div><b>Built around routine</b><span>Support works best when it fits naturally into daily life.</span></div></div>
+<div class="check"><i>✓</i><div><b>Family communication</b><span>Clear conversations help everyone understand the care plan.</span></div></div>
+</div><a class="btn primary" href="#contact">Discuss your needs</a></div>
+</div></section>
+
+<section class="band"><div class="wrap bandGrid"><div><div class="kicker" style="color:#72d5c4">A calmer way to arrange support</div><h2>Small moments of help can make a big difference.</h2><p>Whether you need companionship, practical assistance or ongoing home support, start with a simple conversation about what your family needs.</p></div><div class="numbers"><div class="number"><b>1:1</b><span>Personalized approach</span></div><div class="number"><b>6+</b><span>Core support services</span></div><div class="number"><b>Local</b><span>Gujranwala focused</span></div><div class="number"><b>Care</b><span>People-first mindset</span></div></div></div></section>
+
+<section id="reviews" class="reviews"><div class="wrap"><div class="head"><div class="kicker">Family experiences</div><h2>What matters most to families.</h2><p>Sample testimonials shown for the website design — replace these with your real client reviews.</p></div>
+<div class="reviewGrid"><div class="review"><div class="stars">★★★★★</div><p>“The support felt respectful and personal. Communication with the family was easy and reassuring.”</p><b>— Family member</b></div><div class="review"><div class="stars">★★★★★</div><p>“Having someone dependable at home made our daily routine much easier to manage.”</p><b>— Client family</b></div><div class="review"><div class="stars">★★★★★</div><p>“Kindness and patience made a real difference to our experience of care.”</p><b>— Family member</b></div></div></div></section>
+
+<section class="cta"><div class="wrap"><div class="ctaBox"><div><h2>Need help at home?</h2><p>Tell us what you need and we'll help you understand the next step.</p></div><a class="btn primary" href="#contact">Request a callback →</a></div></div></section>
+
+<section id="faq"><div class="wrap"><div class="head"><div class="kicker">Questions</div><h2>Frequently asked questions.</h2></div><div class="faqGrid">
+<div class="faq"><b>Where do you provide support?</b><span>AI Home Care is designed for families in Gujranwala and surrounding areas.</span></div>
+<div class="faq"><b>Can support be personalized?</b><span>Yes. Your requirements, preferences and routine can be discussed before arranging support.</span></div>
+<div class="faq"><b>How do I contact you?</b><span>Use the form below or the WhatsApp button. The form opens a ready-to-send WhatsApp message.</span></div>
+<div class="faq"><b>Are the testimonials real?</b><span>The examples on this demo should be replaced with verified reviews from your actual clients.</span></div>
+</div></div></section>
+
+<section id="contact" class="contact"><div class="wrap contactGrid"><div><div class="kicker">Let's talk</div><h2>Start with a simple conversation.</h2><p class="contactLead">Share a few details and contact us through WhatsApp. We can then discuss the right type of support for your situation.</p><div class="contactInfo">
+<div class="info"><div class="infoIcon">📍</div><div><b>Area</b><span>Gujranwala, Punjab, Pakistan</span></div></div>
+<div class="info"><div class="infoIcon">📱</div><div><b>WhatsApp</b><span>+92 300 1234567</span></div></div>
+<div class="info"><div class="infoIcon">✉</div><div><b>Email</b><span>hello@aihomecare.example</span></div></div>
+</div></div>
+<form class="form" onsubmit="sendWA(event)"><label>Name</label><input id="n" required placeholder="Your name"><label>Phone</label><input id="p" required placeholder="03xx xxxxxxx"><label>What support do you need?</label><textarea id="m" required placeholder="Briefly tell us about your requirements"></textarea><button class="btn primary" type="submit">Send enquiry on WhatsApp →</button><div class="note">IMPORTANT: Replace the demo WhatsApp number in this file with your real business number before publishing.</div></form>
+</div></section>
+
+<footer><div class="wrap"><div class="foot"><div><h3>AI Home Care</h3><p>Compassionate, professional home-care support for families in Gujranwala.</p></div><div class="footlinks"><a href="#home">Home</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a></div></div><div class="copy">© 2026 AI Home Care. All rights reserved.</div></div></footer>
+<a class="whats" href="https://wa.me/923001234567" target="_blank" aria-label="WhatsApp">◔</a>
 <script>
-function toggleMenu(){document.getElementById('navlinks').classList.toggle('open')}
-document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navlinks').classList.remove('open')));
-function sendWhatsApp(e){
-  e.preventDefault();
-  const name=document.getElementById('name').value.trim();
-  const phone=document.getElementById('phone').value.trim();
-  const msg=document.getElementById('message').value.trim();
-  const text=`Hello AI Home Care,%0A%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0AEnquiry: ${encodeURIComponent(msg)}`;
-  window.open('https://wa.me/923001234567?text='+text,'_blank');
-}
+document.querySelectorAll('.links a').forEach(a=>a.addEventListener('click',()=>document.getElementById('links').classList.remove('open')));
+function sendWA(e){e.preventDefault();const n=document.getElementById('n').value,p=document.getElementById('p').value,m=document.getElementById('m').value;const t=`Hello AI Home Care,%0A%0AName: ${encodeURIComponent(n)}%0APhone: ${encodeURIComponent(p)}%0AEnquiry: ${encodeURIComponent(m)}`;window.open('https://wa.me/923001234567?text='+t,'_blank')}
 </script>
 </body>
 </html>
